@@ -26,15 +26,19 @@
       header {
         background-color: #6200ea;
         color: white;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding: 20px 0; /* Adjust padding to 0 for vertical consistency */
       }
       .container {
         max-width: 1200px;
         margin: auto;
         padding: 20px;
+      }
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px; /* Match container max-width */
+        margin: auto; /* Center the content within the header */
       }
       section {
         margin: 20px 0;
@@ -83,28 +87,34 @@
       .todo {
         font-family: "Courier New", Courier, monospace;
       }
+      .contact-icons {
+        display: flex;
+        gap: 15px;
+      }
     </style>
   </head>
   <body>
     <header>
-      <div>
-        <h1>Zach Maddox</h1>
-        <h2 class="header">Senior Developer</h2>
-      </div>
-      <div class="contact-icons">
-        <a href="mailto:dev@zachmaddox.dev" class="icon" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/zachary-maddox-693a9862"
-          class="icon"
-          title="LinkedIn"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/zmad5306" class="icon" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+      <div class="container header-content">
+        <div>
+          <h1>Zach Maddox</h1>
+          <h2 class="header">Senior Developer</h2>
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:dev@zachmaddox.dev" class="icon" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/zachary-maddox-693a9862"
+            class="icon"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/zmad5306" class="icon" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
       </div>
     </header>
 
