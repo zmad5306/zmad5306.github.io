@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: site
 title: "Chunking Java Streams the Right Way — A Collector That Feels Like It Should Be in the JDK"
 author: "Zach Maddox"
 ---

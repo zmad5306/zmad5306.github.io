@@ -1,16 +1,20 @@
 ---
-layout: default
+layout: site
 title: "Blog"
 ---
 
-<h1>Blog</h1>
-<p>Articles on Java, Architecture, DevOps, and Cloud.</p>
+<section>
+  <h2>Blog</h2>
+  <div class="card">
+    <p>Articles on Java, Architecture, DevOps, and Cloud.</p>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small> — {{ post.date | date: "%B %-d, %Y" }}</small>
-    </li>
-  {% endfor %}
-</ul>
+    <ul class="blog-list">
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br />
+          <span class="blog-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
