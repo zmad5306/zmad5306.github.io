@@ -10,3 +10,11 @@ plugins:
 collections:
   posts:
     output: true
+
+defaults:
+  - scope:
+      path: "blog"
+      type: "posts"
+    values:
+      layout: site
+      author: "Zach Maddox"

@@ -146,7 +146,13 @@
     </header>
 
     <div class="container">
-      {{ content }}
+      {% if page.collection == "posts" %}
+        <article class="card blog-post">
+          {{ content }}
+        </article>
+      {% else %}
+          {{ content }}
+      {% endif %}
     </div>
 
     <footer>
