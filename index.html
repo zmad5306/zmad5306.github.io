@@ -508,35 +508,69 @@
 
         <div class="card full-width">
           <h3>Chunking Collector — Open Source Java Library</h3>
-          <p class="subdued">Java • Open Source • Maven Central • Data Processing</p>
+          <p class="subdued">Java 8+ • Stream API • Maven Central • Zero Dependencies</p>
           <p>
-            <strong>Chunking Collector</strong> is an open-source Java utility that provides a
-            high-performance, memory-efficient way to collect stream elements in chunks — ideal for
-            batch processing and large data transformations.
+            <strong>Chunking Collector</strong> is a small, focused Java library that makes it easy
+            to turn streams and iterables into
+            <strong>fixed-size chunks, sliding windows, and weighted batches</strong> — without
+            pulling in a framework or runtime dependency.
           </p>
           <ul>
-            <li>Designed for efficient streaming and batch data collection.</li>
-            <li>Lightweight, dependency-free, and compatible with Java 8+.</li>
             <li>
-              Published to
+              Fluent <strong>Stream API collectors</strong> for fixed-size chunks, sliding windows,
+              boundary-based grouping, and weighted chunks.
+            </li>
+            <li>
+              Convenience helpers for primitive streams:
+              <code>IntStream</code>, <code>LongStream</code>, and <code>DoubleStream</code>.
+            </li>
+            <li>
+              <strong>Zero dependencies</strong>, Java 8+ compatible, and designed to be dropped
+              into batch jobs, ETL flows, and microservices.
+            </li>
+          </ul>
+          <p class="subdued" style="margin-top: 10px">Available on Maven Central:</p>
+          <pre
+            style="
+              background: #f5f5f5;
+              padding: 10px;
+              border-radius: 4px;
+              overflow-x: auto;
+              margin-top: 0;
+            "
+          >
+<code>&lt;dependency&gt;
+  &lt;groupId&gt;dev.zachmaddox&lt;/groupId&gt;
+  &lt;artifactId&gt;chunking-collector&lt;/artifactId&gt;
+  &lt;version&gt;1.1.0&lt;/version&gt;
+&lt;/dependency&gt;</code>
+          </pre>
+          <div class="pill-row">
+            <span class="pill">
               <a
                 href="https://central.sonatype.com/artifact/dev.zachmaddox/chunking-collector/overview"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Maven Central</a
               >
-              for easy integration.
-            </li>
-            <li>
-              Source available on
+            </span>
+            <span class="pill">
+              <a
+                href="https://zachmaddox.dev/chunking-collector/latest/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >JavaDoc</a
+              >
+            </span>
+            <span class="pill">
               <a
                 href="https://github.com/zmad5306/chunking-collector"
                 target="_blank"
                 rel="noopener noreferrer"
                 >GitHub</a
-              >.
-            </li>
-          </ul>
+              >
+            </span>
+          </div>
         </div>
 
         <div class="card full-width">
