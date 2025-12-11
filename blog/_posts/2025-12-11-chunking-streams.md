@@ -105,14 +105,14 @@ You immediately know what it does.
 <dependency>
   <groupId>dev.zachmaddox</groupId>
   <artifactId>chunking-collector</artifactId>
-  <version>1.1.2</version>
+  <version>1.1.3</version>
 </dependency>
 ```
 
 or:
 
 ```groovy
-implementation 'dev.zachmaddox:chunking-collector:1.1.2'
+implementation 'dev.zachmaddox:chunking-collector:1.1.3'
 ```
 
 ---
