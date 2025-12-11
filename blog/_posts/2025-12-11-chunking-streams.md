@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Chunking Java Streams the Right Way — A Collector That Feels Like It Should Be in the JDK"
+author: "Zach Maddox"
 ---
-
-# **Chunking Java Streams the Right Way — Finally, a Collector That Feels Like It Should Be in the JDK**
 
 If you've ever needed to split a large list or stream into evenly sized chunks, you already know the pain:
 
