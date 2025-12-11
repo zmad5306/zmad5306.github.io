@@ -1,0 +1,12 @@
+title: "Zach Maddox"
+description: "Software Engineering, Java, Cloud, and Architecture"
+theme: jekyll-theme-minimal
+
+# Enable Jekyll posts
+plugins:
+  - jekyll-feed
+
+# Where posts will live
+collections:
+  posts:
+    output: true
