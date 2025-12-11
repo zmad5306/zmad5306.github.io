@@ -16,5 +16,5 @@ defaults:
       path: "blog"
       type: "posts"
     values:
-      layout: site
+      layout: post
       author: "Zach Maddox"
