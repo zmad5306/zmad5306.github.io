@@ -1,10 +1,12 @@
 title: "Zach Maddox"
 description: "Software Engineering, Java, Cloud, and Architecture"
 theme: jekyll-theme-minimal
+url: "https://zachmaddox.dev"
 
 # Enable Jekyll posts
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Where posts will live
 collections:

@@ -1,16 +1,17 @@
 ---
 title: "Chunking Java Streams the Right Way — A Collector That Feels Like It Should Be in the JDK"
+description: "A deep dive into efficient chunking patterns in Java Streams, why they matter, and how to build a collector that feels like native JDK functionality."
 ---
 
 If you've ever needed to split a large list or stream into evenly sized chunks, you already know the pain:
 
-* You write a loop.
-* Or worse, nested loops.
-* Maybe a counter.
-* Maybe a temporary list.
-* Maybe something that *almost* works until one edge case blows it up.
+- You write a loop.
+- Or worse, nested loops.
+- Maybe a counter.
+- Maybe a temporary list.
+- Maybe something that _almost_ works until one edge case blows it up.
 
-Chunking elements is one of those **everyday operations** that *somehow never made it into the JDK*. So developers keep rewriting the same utility method in every project… slightly different each time.
+Chunking elements is one of those **everyday operations** that _somehow never made it into the JDK_. So developers keep rewriting the same utility method in every project… slightly different each time.
 
 After doing this one too many times—and hitting a PostgreSQL driver limitation that forced me to batch thousands of `UUID`s into smaller chunks—I finally decided:
 
@@ -19,7 +20,7 @@ After doing this one too many times—and hitting a PostgreSQL driver limitation
 
 So I built one.
 
-This is **Chunking Collector** — a lightweight Java 8+ library that lets you express chunking in a way that *reads like it belongs in the standard library*.
+This is **Chunking Collector** — a lightweight Java 8+ library that lets you express chunking in a way that _reads like it belongs in the standard library_.
 
 ---
 
@@ -46,11 +47,11 @@ if (!current.isEmpty()) {
 
 It works… until it doesn’t:
 
-* Harder to read
-* Easy to get wrong
-* Not reusable
-* Not parallel-friendly
-* Not stream-friendly
+- Harder to read
+- Easy to get wrong
+- Not reusable
+- Not parallel-friendly
+- Not stream-friendly
 
 It also **breaks the flow** of code that naturally wants to be expressed as a Stream pipeline.
 
@@ -74,7 +75,7 @@ Output:
 That’s it.
 Readable. Safe. Predictable.
 
-This is how chunking *should* feel.
+This is how chunking _should_ feel.
 
 ---
 
@@ -82,11 +83,11 @@ This is how chunking *should* feel.
 
 Because chunking is fundamentally a **reduction operation**:
 
-* A Stream goes in
-* A List of Lists comes out
-* No side effects
-* No mutation leaking out
-* Works naturally with **ordered**, **parallel**, or **sequential** streams
+- A Stream goes in
+- A List of Lists comes out
+- No side effects
+- No mutation leaking out
+- Works naturally with **ordered**, **parallel**, or **sequential** streams
 
 And importantly, this fits the Stream philosophy perfectly:
 
@@ -164,10 +165,10 @@ Chunking.chunk(ids, 500)
 
 The result:
 
-* No driver errors
-* Smaller, faster queries
-* Clear, maintainable code
-* Parallelizable workloads
+- No driver errors
+- Smaller, faster queries
+- Clear, maintainable code
+- Parallelizable workloads
 
 This alone justified building the library.
 
@@ -177,13 +178,13 @@ This alone justified building the library.
 
 Chunking Collector has grown into a flexible toolkit:
 
-* **Remainder policies** (`INCLUDE_PARTIAL`, `DROP_PARTIAL`)
-* **Custom list factories**
-* **Lazy chunk streaming**
-* **Sliding windows**
-* **Boundary-based chunking**
-* **Weighted chunking**
-* **Primitive stream helpers**
+- **Remainder policies** (`INCLUDE_PARTIAL`, `DROP_PARTIAL`)
+- **Custom list factories**
+- **Lazy chunk streaming**
+- **Sliding windows**
+- **Boundary-based chunking**
+- **Weighted chunking**
+- **Primitive stream helpers**
 
 But the core API remains dead simple.
 
@@ -195,12 +196,12 @@ But the core API remains dead simple.
 
 So:
 
-* No dependencies
-* No reflection
-* No magic
-* Just clean Java
-* Very small surface area
-* Behaves exactly how experienced Java devs expect
+- No dependencies
+- No reflection
+- No magic
+- Just clean Java
+- Very small surface area
+- Behaves exactly how experienced Java devs expect
 
 ---
 
