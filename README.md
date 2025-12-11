@@ -26,3 +26,5 @@ Notes:
 - Default build skips future-dated posts; to include them add `--future`.
 - To mirror GitHub Pages exactly you can also use: `bundle exec github-pages serve`.
 - Dark mode is the default; the header toggle persists your choice in localStorage.
+- `Gemfile.lock` is intentionally not committed for GitHub Pages. If you need it locally (e.g., for CI), generate with the Pages-compatible Bundler and include Linux:  
+  `gem install bundler -v 2.5.12` then `bundle _2.5.12_ lock --add-platform x86_64-linux`.
