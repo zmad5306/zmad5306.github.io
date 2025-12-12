@@ -207,9 +207,9 @@ So:
 
 ## 📚 Full Documentation
 
-JavaDoc: [https://zachmaddox.dev/chunking-collector/latest/](https://zmad5306.github.io/chunking-collector/latest/)
+JavaDoc: [https://zachmaddox.dev/ChunkingCollector/latest/](https://zmad5306.github.io/ChunkingCollector/latest/)
 
-GitHub: [https://github.com/zmad5306/chunking-collector](https://github.com/zmad5306/chunking-collector)
+GitHub: [https://github.com/zmad5306/ChunkingCollector](https://github.com/zmad5306/ChunkingCollector)
 
 Maven Central: [https://central.sonatype.com/artifact/dev.zachmaddox/chunking-collector](https://central.sonatype.com/artifact/dev.zachmaddox/chunking-collector)
 
