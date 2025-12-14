@@ -32,46 +32,31 @@ title: "Blog"
     right: 1.75rem;
     background: var(--primary);
     color: var(--on-primary);
-    border: 1px solid var(--border);
+    padding: 0.75rem 1.1rem;
     border-radius: 999px;
     font-weight: 600;
     font-size: 0.9rem;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
     z-index: 999;
-    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease,
-      width 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
-    padding: 0.75rem;
-    width: 3rem;
-    overflow: hidden;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease,
+      opacity 0.2s ease;
     opacity: 0.95;
-    white-space: nowrap;
-  }
-
-  .rss-float span {
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-
-  .rss-float:hover {
-    background: var(--primary-strong);
-    transform: translateY(-3px);
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
-    width: 8.5rem;
-    padding: 0.75rem 1rem;
-    opacity: 1;
-    text-decoration: none;
-  }
-
-  .rss-float:hover span {
-    opacity: 1;
   }
 
   .rss-float i {
     font-size: 1.1rem;
+  }
+
+  .rss-float:hover {
+    background: var(--primary-strong);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+    opacity: 1;
+    text-decoration: none;
   }
 </style>
