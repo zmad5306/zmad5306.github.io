@@ -423,19 +423,72 @@ permalink: /
   </div>
 
   <div class="card full-width">
-    <h3>ScoreCard — Distributed Microservice Transaction Orchestration</h3>
-    <p class="subdued">Java 17 • Spring Boot • REST API • OpenAPI • PostgreSQL • Docker</p>
-    <p>
-      <strong>ScoreCard</strong> is a personal R&amp;D project focused on
-      <strong>coordinating transactions across microservices</strong>. It implements a custom engine
-      inspired by saga and outbox patterns to track, reconcile, and recover multi-step workflows in
-      distributed systems.
+    <h3>Score Card — Observability-Driven Distributed Transaction Engine</h3>
+    <p class="subdued">
+      Java 17 • Spring Boot • JMS / ActiveMQ • REST API • OpenAPI • PostgreSQL • Docker
     </p>
+
+    <p>
+      <strong>Score Card</strong> is a research project and working prototype that explores a new
+      way to manage <strong>complex, cross-service transactions</strong> without relying on
+      heavyweight orchestration, 2PC, or tightly coupled saga coordinators. Instead of forcing
+      microservices to participate in a global transaction, Score Card uses
+      <strong>observability, correlation, and dependency-aware authorization</strong> to reconstruct
+      and reason about multi-step workflows as they unfold.
+    </p>
+
+    <p>
+      At its core, Score Card models a transaction as a graph of actions across independent
+      services. Each service performs its work autonomously and reports status updates back to the
+      Score Card engine, which assembles a real-time view of the end-to-end flow. This enables
+      <strong>failure detection, auditing, recovery, and compensation</strong> without sacrificing
+      service autonomy or scalability.
+    </p>
+
     <ul>
-      <li>Modular orchestration, persistence, and API layers.</li>
-      <li>OpenAPI-defined REST interface for easy integration.</li>
-      <li>Backed by PostgreSQL with time-based tracking and analytics.</li>
+      <li>
+        <strong>Explicit workflow modeling:</strong> services, actions, dependencies, and
+        transaction blueprints definable via REST or UI.
+      </li>
+      <li>
+        <strong>Loose coupling:</strong> microservices stay independent; Score Card coordinates
+        using messages and correlation IDs.
+      </li>
+      <li>
+        <strong>Real-time observability:</strong> action states, timestamps, metadata, and outcomes
+        tracked in PostgreSQL.
+      </li>
+      <li>
+        <strong>Resilience & recovery:</strong> compensating transactions (e.g., reversing a
+        financial debit) triggered from observed failures.
+      </li>
+      <li>
+        <strong>Developer UIs included:</strong> a model portal and a live scoreboard for monitoring
+        transaction execution.
+      </li>
+      <li>
+        <strong>Example microservices:</strong> including a banking transfer scenario demonstrating
+        sequencing, retries, and compensation.
+      </li>
     </ul>
+
+    <div class="pill-row">
+      <span class="pill">
+        <a href="https://github.com/zmad5306/ScoreCard" target="_blank" rel="noopener noreferrer">
+          GitHub Repo
+        </a>
+      </span>
+
+      <span class="pill">
+        <a
+          href="https://zachmaddox.dev/blog/2025/12/14/score-card.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Project Blog Post
+        </a>
+      </span>
+    </div>
   </div>
 
   <div class="card full-width">
