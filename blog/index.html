@@ -16,8 +16,40 @@ title: "Blog"
       </li>
       {% endfor %}
     </ul>
-    <p>
-      <a href="{{ '/feed.xml' | relative_url }}"> <i class="fa fa-rss"></i> Subscribe via RSS </a>
-    </p>
   </div>
 </section>
+
+<!-- Floating RSS Subscribe Button -->
+<a href="{{ '/feed.xml' | relative_url }}" class="rss-float" title="Subscribe via RSS">
+  <i class="fa fa-rss"></i> Subscribe
+</a>
+
+<style>
+  .rss-float {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: #ff7a00;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 122, 0, 0.4);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s ease;
+    z-index: 999;
+  }
+
+  .rss-float i {
+    font-size: 1.25rem;
+  }
+
+  .rss-float:hover {
+    background: #ff9f1a;
+    box-shadow: 0 6px 18px rgba(255, 122, 0, 0.6);
+    transform: translateY(-3px);
+  }
+</style>
