@@ -65,7 +65,7 @@ body {
 }
 
 header {
-  background-color: var(--primary);
+  background-color: var(--primary-strong);
   color: var(--on-primary);
   padding: 20px 0;
 }
