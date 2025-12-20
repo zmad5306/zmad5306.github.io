@@ -1,18 +1,19 @@
 :root {
+  /* Palette pulled from ScoreKeeper Android theme */
   color-scheme: dark;
-  --bg: #1c1b1f;
-  --surface: #1c1b1f;
-  --surface-contrast: #49454f;
-  --text: #e6e1e5;
-  --muted: #cac4d0;
-  --primary: #6650a4;
-  --primary-strong: #4f378b;
-  --on-primary: #ffffff;
+  --bg: #1c1b1f; /* DarkBackground */
+  --surface: #1c1b1f; /* DarkSurface */
+  --surface-contrast: #49454f; /* DarkSurfaceVariant */
+  --text: #e6e1e5; /* DarkOnBackground */
+  --muted: #cac4d0; /* DarkOnSurfaceVariant */
+  --primary: #d0bcff; /* Purple80 */
+  --primary-strong: #4f378b; /* DarkPrimaryContainer */
+  --on-primary: #ffffff; /* Color.White */
   --link: #d0bcff;
-  --border: #49454f;
+  --border: #49454f; /* DarkOutlineVariant */
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   --pill-bg: #49454f;
-  --pill-text: #eaddff;
+  --pill-text: #eaddff; /* DarkOnPrimaryContainer */
 }
 
 :root[data-theme="dark"] {
@@ -21,16 +22,16 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #fffbfe;
-  --surface: #fffbfe;
-  --surface-contrast: #e7e0ec;
-  --text: #1c1b1f;
-  --muted: #49454f;
-  --primary: #6650a4;
-  --primary-strong: #4f378b;
-  --on-primary: #f6eeff;
+  --bg: #fffbfe; /* LightBackground */
+  --surface: #fffbfe; /* LightSurface */
+  --surface-contrast: #e7e0ec; /* LightSurfaceVariant */
+  --text: #1c1b1f; /* LightOnBackground */
+  --muted: #49454f; /* LightOnSurfaceVariant */
+  --primary: #6650a4; /* Purple40 */
+  --primary-strong: #4f378b; /* Deepened accent */
+  --on-primary: #f6eeff; /* Softer ink */
   --link: #6650a4;
-  --border: #cac4d0;
+  --border: #cac4d0; /* LightOutlineVariant */
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   --pill-bg: #e7e0ec;
   --pill-text: #49454f;
@@ -65,7 +66,7 @@ body {
 }
 
 header {
-  background-color: var(--primary-strong);
+  background-color: var(--primary);
   color: var(--on-primary);
   padding: 20px 0;
 }
