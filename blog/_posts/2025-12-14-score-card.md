@@ -338,8 +338,8 @@ If you’re living in the world of microservices, sagas, and eventual consistenc
 
 You can find the paper-like README, API modules, UIs, and example services here:
 
-- **Repository:** `github.com/zmad5306/ScoreCard`
-- **Research-style README:** `README.md` in the root
-- **Setup details:** `GETTING_STARTED.md`
+- **Repository:** [https://github.com/zmad5306/ScoreCard](https://github.com/zmad5306/ScoreCard)
+- **Research-style README:** [README.md](https://github.com/zmad5306/ScoreCard/blob/main/README.md) in the root
+- **Setup details:** [GETTING_STARTED.md](https://github.com/zmad5306/ScoreCard/blob/main/GETTING_STARTED.md)
 
 Run it, break it, and see how far observability-driven composition can take you in your own systems.
