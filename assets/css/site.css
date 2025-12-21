@@ -8,11 +8,11 @@
   --primary: #8b5cf6;
   --primary-strong: #a78bfa;
   --on-primary: #f8fafc;
-  --link: #c084fc;
+  --link: #f7c948;
   --border: rgba(255, 255, 255, 0.08);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --pill-bg: #1f2937;
-  --pill-text: #e0e7ff;
+  --pill-bg: rgba(247, 201, 72, 0.22);
+  --pill-text: #f7c948;
 }
 
 :root[data-theme="dark"] {
