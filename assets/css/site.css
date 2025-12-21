@@ -1,19 +1,18 @@
 :root {
   color-scheme: dark;
-  --bg: #1a1120; /* dark purple base */
-  --surface: #2e1834; /* Dark Purple */
-  --surface-contrast: #4c275c; /* American Purple */
-  --text: #f4efff;
-  --muted: #c9b8de;
-  --primary: #6a3c99; /* Purple Heart */
-  --primary-strong: #4c275c; /* American Purple */
-  --on-primary: #fdfaff;
-  --link: #cc9901; /* Chinese Gold */
+  --bg: #0f172a;
+  --surface: #111827;
+  --surface-contrast: #1f2937;
+  --text: #e5e7eb;
+  --muted: #cbd5e1;
+  --primary: #8b5cf6;
+  --primary-strong: #a78bfa;
+  --on-primary: #f8fafc;
+  --link: #c084fc;
   --border: rgba(255, 255, 255, 0.08);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --pill-bg: rgba(204, 153, 1, 0.12); /* Chinese Gold */
-  --pill-text: #cc9901;
-  --pill-border: rgba(204, 153, 1, 0.45);
+  --pill-bg: #1f2937;
+  --pill-text: #e0e7ff;
 }
 
 :root[data-theme="dark"] {
@@ -22,39 +21,37 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #f9f7ff;
+  --bg: #f4f4f4;
   --surface: #ffffff;
-  --surface-contrast: #efe9ff;
-  --text: #20112d;
-  --muted: #615073;
-  --primary: #6a3c99; /* Purple Heart */
-  --primary-strong: #4c275c; /* American Purple */
+  --surface-contrast: #f7f7f7;
+  --text: #111827;
+  --muted: #4b5563;
+  --primary: #6200ea;
+  --primary-strong: #5136c6;
   --on-primary: #ffffff;
-  --link: #a57c00; /* Gold */
+  --link: #6200ea;
   --border: rgba(0, 0, 0, 0.08);
-  --shadow: 0 10px 28px rgba(32, 17, 45, 0.12);
-  --pill-bg: rgba(165, 124, 0, 0.12); /* Gold */
-  --pill-text: #a57c00;
-  --pill-border: rgba(165, 124, 0, 0.4);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --pill-bg: #ede7f6;
+  --pill-text: #4527a0;
 }
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
     color-scheme: light;
-    --bg: #f9f7ff;
+    --bg: #f4f4f4;
     --surface: #ffffff;
-    --surface-contrast: #efe9ff;
-    --text: #20112d;
-    --muted: #615073;
-    --primary: #6a3c99;
-    --primary-strong: #4c275c;
+    --surface-contrast: #f7f7f7;
+    --text: #111827;
+    --muted: #4b5563;
+    --primary: #6200ea;
+    --primary-strong: #5136c6;
     --on-primary: #ffffff;
-    --link: #a57c00;
+    --link: #6200ea;
     --border: rgba(0, 0, 0, 0.08);
-    --shadow: 0 10px 28px rgba(32, 17, 45, 0.12);
-    --pill-bg: rgba(165, 124, 0, 0.12);
-    --pill-text: #a57c00;
-    --pill-border: rgba(165, 124, 0, 0.4);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --pill-bg: #ede7f6;
+    --pill-text: #4527a0;
   }
 }
 
@@ -245,7 +242,6 @@ ul {
   padding: 4px 10px;
   border-radius: 999px;
   font-size: 0.8rem;
-  border: 1px solid var(--pill-border);
 }
 
 /* Theme toggle */
@@ -267,24 +263,24 @@ ul {
 
 :root[data-theme="light"] .theme-toggle {
   background: #ffffff;
-  color: #20112d;
+  color: #111827;
   border-color: rgba(0, 0, 0, 0.2);
 }
 
 :root[data-theme="light"] .theme-toggle:hover {
-  background: #efe9ff;
+  background: #f7f7f7;
   border-color: rgba(0, 0, 0, 0.35);
 }
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) .theme-toggle {
     background: #ffffff;
-    color: #20112d;
+    color: #111827;
     border-color: rgba(0, 0, 0, 0.2);
   }
 
   :root:not([data-theme]) .theme-toggle:hover {
-    background: #efe9ff;
+    background: #f7f7f7;
     border-color: rgba(0, 0, 0, 0.35);
   }
 }
