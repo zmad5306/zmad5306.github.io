@@ -1,0 +1,6 @@
+# docs/_config.yml
+title: ScoreKEEPER
+description: Simple, flexible score tracking for card and board games.
+theme: jekyll-theme-minimal
+logo: /assets/images/ic_launcher-playstore.png
+show_downloads: false
