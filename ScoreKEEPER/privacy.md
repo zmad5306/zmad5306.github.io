@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: scorekeeper
 title: Privacy Policy - ScoreKEEPER
 ---
 
