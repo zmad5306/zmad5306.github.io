@@ -12,7 +12,7 @@ title: ScoreKEEPER
       Add players on the fly, keep turns moving, and stay focused on the fun.
     </p>
     <div class="hero__actions">
-      <a class="button primary disabled" href="https://play.google.com/store/apps/details?id=dev.zachmaddox.scorekeeper" target="_blank" aria-disabled="true" role="button">Google Play</a>
+      <a class="button primary" href="https://play.google.com/store/apps/details?id=dev.zachmaddox.scorekeeper" target="_blank role="button">Google Play</a>
       <a class="button ghost" href="#privacy">Privacy first</a>
     </div>
     <ul class="pill-list">
