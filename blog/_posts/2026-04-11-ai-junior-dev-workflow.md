@@ -404,3 +404,5 @@ If you’re still using AI as autocomplete, you’re leaving most of the value o
 Try treating it like a junior developer instead.
 
 You might find yourself shipping entire products in weeks.
+
+And the burning question: What agent did I use [Codex](https://chatgpt.com/codex) (not a sponsor 😉)?
