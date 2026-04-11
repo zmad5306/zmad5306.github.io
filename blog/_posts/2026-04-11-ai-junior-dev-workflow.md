@@ -263,6 +263,7 @@ It answers the questions a junior dev would normally ask:
 * What are the guardrails?
 * What are the non-negotiables?
 
+
 ## What goes in `agents.md`
 
 ### Workflow rules
