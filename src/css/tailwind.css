@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   Design tokens — dark is the default theme.
+   Hue discipline: every purple sits in the 255–270° range, saturation capped.
+   Neutrals are cool graphite with a faint violet cast, not tinted purple.
+   --------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    color-scheme: dark;
+
+    --bg: #0a0912;
+    --surface: #13111c;
+    --surface-2: #1b1826;
+    --border: #2a2438;
+    --text: #e6e3ee;
+    --text-muted: #8e8aa0;
+    --primary: #6e56cf;
+    --primary-deep: #4b3a9e;
+    --primary-dim: #2e2456;
+    --accent: #b08d57;
+
+    /* derived, not thematic: focus ring + selection */
+    --ring: var(--primary);
+    --selection-bg: var(--primary-dim);
+  }
+
+  :root[data-theme='light'] {
+    color-scheme: light;
+
+    --bg: #f6f5f8;
+    --surface: #ffffff;
+    --surface-2: #efedf3;
+    --border: #ddd9e4;
+    --text: #16141f;
+    --text-muted: #55506a;
+    --primary: #5b3fbf;
+    --primary-deep: #4b3a9e;
+    --primary-dim: #e4dff2;
+    --accent: #8a6a3b;
+
+    --selection-bg: #d8d1ec;
+  }
+
+  /* First visit, no stored choice, OS prefers light — JS sets data-theme
+     immediately, but this keeps the no-JS experience honest. */
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+      color-scheme: light;
+
+      --bg: #f6f5f8;
+      --surface: #ffffff;
+      --surface-2: #efedf3;
+      --border: #ddd9e4;
+      --text: #16141f;
+      --text-muted: #55506a;
+      --primary: #5b3fbf;
+      --primary-deep: #4b3a9e;
+      --primary-dim: #e4dff2;
+      --accent: #8a6a3b;
+
+      --selection-bg: #d8d1ec;
+    }
+  }
+
+  /* -------------------------------------------------------------------------
+     Self-hosted fonts (latin subsets, variable weight). No runtime font CDN.
+     ------------------------------------------------------------------------- */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 600 700;
+    font-display: swap;
+    src: url('/assets/fonts/fraunces-latin-var.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+      U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 600;
+    font-display: swap;
+    src: url('/assets/fonts/inter-latin-var.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+      U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400 500;
+    font-display: swap;
+    src: url('/assets/fonts/jetbrains-mono-latin-var.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+      U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* -------------------------------------------------------------------------
+     Base typography — modular scale (1.25 ratio on a 17px base).
+     ------------------------------------------------------------------------- */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* clear the sticky header on anchor jumps */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-bg font-sans text-text antialiased;
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.65;
+  }
+
+  ::selection {
+    background: var(--selection-bg);
+    color: var(--text);
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-semibold tracking-tight text-text;
+    line-height: 1.15;
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 5vw, 3.25rem);
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: clamp(1.55rem, 3vw, 2.1rem);
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    @apply font-sans text-sm font-semibold uppercase tracking-wide text-muted;
+  }
+
+  a {
+    @apply text-primary underline-offset-4 transition-colors;
+  }
+
+  a:hover {
+    @apply underline;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    @apply font-mono;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}

@@ -41,7 +41,7 @@
     />
     <link
       rel="stylesheet"
-      href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.github.build_revision }}"
+      href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}"
     />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -125,6 +125,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.github.build_revision }}"></script>
+    <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   </body>
 </html>

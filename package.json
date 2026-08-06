@@ -1,0 +1,13 @@
+{
+  "name": "zachmaddox.dev",
+  "private": true,
+  "description": "Personal site and blog — Tailwind CSS build step",
+  "scripts": {
+    "build:css": "tailwindcss -i src/css/tailwind.css -o assets/css/main.css --minify",
+    "watch:css": "tailwindcss -i src/css/tailwind.css -o assets/css/main.css --watch",
+    "mermaid": "node src/scripts/render-mermaid.mjs"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
