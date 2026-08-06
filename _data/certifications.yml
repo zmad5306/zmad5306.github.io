@@ -1,0 +1,23 @@
+# Certifications — compact list, low visual weight. Content unchanged.
+- issuer: Azul PartnerConnect
+  items:
+    - name: Certified OpenJDK Migration Services Partner
+      year: "2024"
+    - name: Certified OpenJDK Migration Advisory Partner
+      year: "2024"
+    - name: Platform Prime Certified Partner Engineer
+      year: "2024"
+    - name: Platform Core Certified Partner Engineer
+      year: "2024"
+
+- issuer: Microsoft Azure
+  items:
+    - name: "Microsoft Certified: Azure Solutions Architect Expert"
+      year: "2023"
+    - name: "Microsoft Certified: Azure Administrator Associate"
+      year: "2023"
+
+- issuer: Scrum Alliance
+  items:
+    - name: Certified ScrumMaster (CSM)
+      year: "2019"

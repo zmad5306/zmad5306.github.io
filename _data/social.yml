@@ -1,0 +1,19 @@
+# Contact / profile links used by nav and footer.
+- label: Email
+  url: mailto:dev@zachmaddox.dev
+  icon: email
+- label: GitHub
+  url: https://github.com/zmad5306
+  icon: github
+- label: LinkedIn
+  url: https://www.linkedin.com/in/zachary-maddox-693a9862
+  icon: linkedin
+- label: dev.to
+  url: https://dev.to/zmad5306
+  icon: devto
+- label: Medium
+  url: https://medium.com/@zmad5306
+  icon: medium
+- label: RSS
+  url: /feed.xml
+  icon: rss

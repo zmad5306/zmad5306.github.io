@@ -1,0 +1,137 @@
+# Personal projects & homelab — card grid with badge links. Markdown bodies.
+- title: Chunking Collector
+  subtitle: Open Source Java Library
+  stack: Java 8+ • Stream API • Maven Central • Zero Dependencies
+  body: >-
+    **Chunking Collector** is a small, focused Java library that makes it easy
+    to turn streams and iterables into **fixed-size chunks, sliding windows,
+    and weighted batches** — without pulling in a framework or runtime
+    dependency.
+  bullets:
+    - >-
+      Fluent **Stream API collectors** for fixed-size chunks, sliding windows,
+      boundary-based grouping, and weighted chunks.
+    - >-
+      Convenience helpers for primitive streams: `IntStream`, `LongStream`,
+      and `DoubleStream`.
+    - >-
+      **Zero dependencies**, Java 8+ compatible, and designed to be dropped
+      into batch jobs, ETL flows, and microservices.
+  links:
+    - label: Maven Central
+      url: https://central.sonatype.com/artifact/dev.zachmaddox/chunking-collector/overview
+    - label: JavaDoc
+      url: https://zachmaddox.dev/ChunkingCollector/latest/
+    - label: GitHub
+      url: https://github.com/zmad5306/ChunkingCollector
+    - label: Blog Post
+      url: /blog/2025/12/11/chunking-streams.html
+
+- title: Compose Reorderable Grid
+  subtitle: Open Source Jetpack Compose Library
+  stack: Kotlin • Jetpack Compose • Android • Maven Central
+  body: >-
+    **Compose Reorderable Grid** is a production-grade, long-press
+    drag-and-drop grid for **Jetpack Compose**. It provides smooth, predictable
+    reordering with auto-scroll support and stable gesture handling, extracted
+    and refined from a real shipping Android app.
+  bullets:
+    - >-
+      **Silky-smooth drag-and-drop:** natural item displacement with no
+      flicker, snapping, or gesture cancellation.
+    - >-
+      **Production-tested:** tuned on physical devices and large scrolling
+      grids.
+    - >-
+      **Compose-correct:** avoids pointer restarts, stale lambdas, and
+      recomposition storms.
+    - >-
+      **Small, focused API:** designed to be easy to reason about and safe to
+      adopt.
+  links:
+    - label: Maven Central
+      url: https://central.sonatype.com/artifact/dev.zachmaddox.compose/compose-reorderable-grid/overview
+    - label: GitHub
+      url: https://github.com/zmad5306/compose-reorderable-grid
+    - label: Blog Post
+      url: /blog/2025/12/19/android-reorderable-grid.html
+
+- title: Score Card
+  subtitle: Observability-Driven Distributed Transaction Engine
+  stack: Java 17 • Spring Boot • JMS / ActiveMQ • REST API • OpenAPI • PostgreSQL • Docker
+  body: >-
+    **Score Card** is a research project and working prototype that explores a
+    new way to manage **complex, cross-service transactions** without relying
+    on heavyweight orchestration, 2PC, or tightly coupled saga coordinators.
+    Instead of forcing microservices to participate in a global transaction,
+    Score Card uses **observability, correlation, and dependency-aware
+    authorization** to reconstruct and reason about multi-step workflows as
+    they unfold.
+
+
+    At its core, Score Card models a transaction as a graph of actions across
+    independent services. Each service performs its work autonomously and
+    reports status updates back to the Score Card engine, which assembles a
+    real-time view of the end-to-end flow. This enables **failure detection,
+    auditing, recovery, and compensation** without sacrificing service autonomy
+    or scalability.
+  bullets:
+    - >-
+      **Explicit workflow modeling:** services, actions, dependencies, and
+      transaction blueprints definable via REST or UI.
+    - >-
+      **Loose coupling:** microservices stay independent; Score Card
+      coordinates using messages and correlation IDs.
+    - >-
+      **Real-time observability:** action states, timestamps, metadata, and
+      outcomes tracked in PostgreSQL.
+    - >-
+      **Resilience & recovery:** compensating transactions (e.g., reversing a
+      financial debit) triggered from observed failures.
+    - >-
+      **Developer UIs included:** a model portal and a live scoreboard for
+      monitoring transaction execution.
+    - >-
+      **Example microservices:** including a banking transfer scenario
+      demonstrating sequencing, retries, and compensation.
+  links:
+    - label: GitHub
+      url: https://github.com/zmad5306/ScoreCard
+    - label: Blog Post
+      url: /blog/2025/12/14/score-card.html
+
+- title: ActionWatch
+  subtitle: Real Observability for GitHub Actions
+  url: https://actionwatch.dev
+  stack: >-
+    React • TypeScript • Vite • C# / .NET 10 • GraphQL • SignalR • GitHub
+    Webhooks • PostgreSQL • TimescaleDB • Redis
+  body: >-
+    **ActionWatch** is a platform for understanding what is really happening
+    inside **GitHub Actions**. It turns webhook-driven workflow activity into
+    live operational visibility, historical analytics, and dashboards that help
+    teams debug failures, track reliability, and understand CI/CD behavior over
+    time.
+
+
+    Built as a modular monolith, it combines a React frontend, a .NET backend,
+    GraphQL-powered analytics reads, realtime updates over SignalR, and a
+    Timescale-backed data platform for durable event and trend analysis.
+
+
+    ActionWatch is also a showcase for AI-augmented engineering in practice:
+    **100% AI-coded**, with the architecture, intent, and final engineering
+    judgment driven by me. I wrote about that workflow
+    [here](/blog/2026/04/11/ai-junior-dev-workflow.html).
+  links:
+    - label: actionwatch.dev
+      url: https://actionwatch.dev
+
+- title: Homelab & Self-Hosted Cloud
+  stack: Linux • Docker • Docker Compose • WireGuard • Nextcloud • Pi-hole
+  body: >-
+    I operate a personal **Linux server** hosting a suite of **containerized
+    services**, including Nextcloud, Pi-hole, WireGuard VPN, and monitoring
+    tools. This homelab serves as a sandbox for experimenting with container
+    orchestration, networking, automation, and secure self-hosting — and keeps
+    my personal infrastructure fully under my control.

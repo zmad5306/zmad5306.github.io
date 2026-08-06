@@ -1,6 +1,7 @@
 ---
 title: "Stop Coding Everything Yourself — Hire an AI Junior Developer Instead"
 description: "A case study on using AI coding agents as junior developers, replacing implementation work while you focus on architecture, product, and outcomes."
+tags: [ai, engineering-practice, workflow]
 ---
 
 If you’ve been paying attention to AI in software development, you’ve probably seen the usual takes:

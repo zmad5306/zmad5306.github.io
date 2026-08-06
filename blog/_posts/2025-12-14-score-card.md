@@ -1,6 +1,7 @@
 ---
 title: "Observability Over Orchestration: What I Learned Building Score Card"
 description: "This post explores the architectural insights behind Score Card, a research-driven experiment in managing complex, cross-service transactions without heavyweight orchestration or distributed locks. Instead of enforcing strict coordination across microservices, Score Card embraces observability, using events, correlation, and lightweight authorization rules to reconstruct and reason about multi-step workflows such as banking transfers. Through real examples, diagrams, and design reflections, the article demonstrates how loosely coupled services can still participate in coherent, trackable, and recoverable business transactions. It’s a practical look at an emerging pattern: observability-driven transaction composition for modern distributed systems."
+tags: [architecture, distributed-systems, microservices, observability]
 ---
 
 > _How far can you get by **watching** distributed transactions instead of trying to **control** them?_

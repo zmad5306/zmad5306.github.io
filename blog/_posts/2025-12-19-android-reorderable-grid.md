@@ -1,6 +1,7 @@
 ---
 title: "Reorderable Grids in Jetpack Compose — Shipping What the Samples Don’t"
 description: "Why reorderable grids are deceptively hard in Jetpack Compose, the edge cases that break naïve implementations, and how a production-ready solution finally emerged."
+tags: [android, kotlin, jetpack-compose, open-source]
 ---
 
 If you’ve ever tried to build a **reorderable grid** in Jetpack Compose, you probably thought:

@@ -16,13 +16,13 @@ permalink: /
       "https://github.com/zmad5306",
       "https://www.linkedin.com/in/zachary-maddox-693a9862",
       "https://dev.to/zmad5306",
-      "https://medium.com/@dev_91139"
+      "https://medium.com/@zmad5306"
     ]
   }
 </script>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
   <h2>About Me</h2>
   <div class="card full-width">
     <p>
@@ -46,7 +46,7 @@ permalink: /
       engineering reliable systems is.
     </p>
     <p style="margin-top: 10px">
-      📄 You can also
+      You can also
       <a
         href="https://github.com/zmad5306/zmad5306/blob/main/career-archive/RESUME.md"
         target="_blank"
@@ -59,7 +59,7 @@ permalink: /
 </section>
 
 <!-- HOW I CAN HELP -->
-<section>
+<section id="services">
   <h2>How I Can Help</h2>
   <div class="card full-width">
     <ul>
@@ -84,7 +84,7 @@ permalink: /
 </section>
 
 <!-- AI-AUGMENTED ENGINEERING -->
-<section>
+<section id="ai">
   <h2>AI-Augmented Engineering</h2>
   <div class="card full-width">
     <p>
@@ -103,153 +103,24 @@ permalink: /
 </section>
 
 <!-- SKILLS -->
-<section>
+<section id="skills">
   <h2>Skills</h2>
   <div class="skills-grid">
+    {% for group in site.data.skills %}
     <div class="card">
-      <h3>Programming Languages</h3>
+      <h3>{{ group.name }}</h3>
       <div class="pill-row">
-        <span class="pill">Java</span>
-        <span class="pill">C#</span>
-        <span class="pill">Python</span>
-        <span class="pill">Kotlin</span>
-        <span class="pill">JavaScript</span>
-        <span class="pill">TypeScript</span>
-        <span class="pill">SQL</span>
+        {% for skill in group.skills %}
+        <span class="pill">{{ skill }}</span>
+        {% endfor %}
       </div>
     </div>
-
-    <div class="card">
-      <h3>Frameworks & Platforms</h3>
-      <div class="pill-row">
-        <span class="pill">Spring Boot</span>
-        <span class="pill">.NET / ASP.NET Core</span>
-        <span class="pill">Node.js / Express</span>
-        <span class="pill">Angular</span>
-        <span class="pill">React</span>
-        <span class="pill">Azure Functions</span>
-        <span class="pill">Tailwind CSS</span>
-        <span class="pill">Zustand</span>
-        <span class="pill">MuleSoft ESB</span>
-        <span class="pill">Flask</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Database & Storage</h3>
-      <div class="pill-row">
-        <span class="pill">PostgreSQL</span>
-        <span class="pill">SQL Server</span>
-        <span class="pill">DB2</span>
-        <span class="pill">Oracle</span>
-        <span class="pill">TimescaleDB</span>
-        <span class="pill">MongoDB</span>
-        <span class="pill">Redis</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Cloud Platforms & Services</h3>
-      <div class="pill-row">
-        <span class="pill">Azure</span>
-        <span class="pill">Azure ARM</span>
-        <span class="pill">Azure Bicep</span>
-        <span class="pill">Azure API Management</span>
-        <span class="pill">Azure Application Gateway</span>
-        <span class="pill">Azure Blob Storage</span>
-        <span class="pill">AWS</span>
-        <span class="pill">AWS Cloud Formation</span>
-        <span class="pill">AWS CDK</span>
-        <span class="pill">GCP</span>
-        <span class="pill">AWS Lambda</span>
-        <span class="pill">AWS Fargate</span>
-        <span class="pill">AWS EKS</span>
-        <span class="pill">Azure AKS</span>
-        <span class="pill">Heroku</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Eventing & Messaging</h3>
-      <div class="pill-row">
-        <span class="pill">Amazon Kinesis</span>
-        <span class="pill">Azure Event Hubs</span>
-        <span class="pill">RabbitMQ</span>
-        <span class="pill">Active MQ</span>
-        <span class="pill">Amazon SQS</span>
-        <span class="pill">Amazon SNS</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>DevOps & Automation</h3>
-      <div class="pill-row">
-        <span class="pill">Docker</span>
-        <span class="pill">Kubernetes</span>
-        <span class="pill">Azure DevOps</span>
-        <span class="pill">Bitbucket</span>
-        <span class="pill">GitHub</span>
-        <span class="pill">GitHub Actions</span>
-        <span class="pill">GitLab CI</span>
-        <span class="pill">Jenkins</span>
-        <span class="pill">Trunk-based development</span>
-        <span class="pill">Feature flags</span>
-        <span class="pill">Blue/green releases</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Security & Identity</h3>
-      <div class="pill-row">
-        <span class="pill">OAuth2 / OIDC</span>
-        <span class="pill">Bearer tokens</span>
-        <span class="pill">RBAC</span>
-        <span class="pill">CAIA integration</span>
-        <span class="pill">FedRAMP High</span>
-        <span class="pill">Secure API gateways</span>
-        <span class="pill">Hashicorp Vault</span>
-        <span class="pill">Azure Key Vault</span>
-        <span class="pill">AWS Secrets Manager</span>
-        <span class="pill">Private networking</span>
-        <span class="pill">mTLS</span>
-        <span class="pill">PKI management</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Architecture & Design</h3>
-      <div class="pill-row">
-        <span class="pill">Application architecture</span>
-        <span class="pill">Cloud architecture</span>
-        <span class="pill">Microservice architecture</span>
-        <span class="pill">API design</span>
-        <span class="pill">Event-driven systems</span>
-        <span class="pill">Observability</span>
-        <span class="pill">Maintainability</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Data Engineering & Analytics</h3>
-      <div class="pill-row">
-        <span class="pill">Azure Data Factory</span>
-        <span class="pill">SSIS</span>
-        <span class="pill">ETL orchestration</span>
-        <span class="pill">Partner data exchange</span>
-        <span class="pill">Reconciliation workflows</span>
-        <span class="pill">Replay / backfill tooling</span>
-        <span class="pill">SQL optimization</span>
-        <span class="pill">Schema design</span>
-        <span class="pill">Data modeling</span>
-        <span class="pill">Debezium</span>
-        <span class="pill">AWS DMS</span>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <!-- WORK EXPERIENCE -->
-<section>
+<section id="experience">
   <h2>Work Experience</h2>
   <p>
     A detailed version of my career history — including key projects, leadership, and modernization
@@ -262,498 +133,98 @@ permalink: /
       View Full Career Archive →
     </a>
   </p>
+  {% for job in site.data.experience %}
   <div class="card full-width">
-    <h3>Senior Software Engineer / Architect</h3>
-    <h4>2021 – Present · JBS.dev</h4>
-    <p class="subdued">
-      Consulting across architecture, backend, DevOps, and data engineering — with a focus on
-      cloud-first, secure, and reliable systems.
-    </p>
+    <h3>{{ job.role }}</h3>
+    <h4>{{ job.start }} – {{ job.end }} · {{ job.company }}</h4>
+    <p class="subdued">{{ job.summary }}</p>
     <ul>
-      <li>
-        Delivered major features for an
-        <strong>energy-sector sustainability platform</strong>, including emissions tracking, goal
-        modeling, and IoT-driven energy data.
-      </li>
-      <li>
-        Built backend microservices in
-        <strong>Java (Spring Boot)</strong>, with supporting <strong>Python</strong> services for
-        data ingestion and reporting.
-      </li>
-      <li>
-        Migrated the client’s stack to <strong>AWS ECS</strong>, introducing full
-        <strong>containerization</strong> and <strong>one-click CI/CD automation</strong>.
-      </li>
-      <li>
-        Designed and implemented <strong>real-time reporting APIs</strong> and dashboards backed by
-        <strong>PostgreSQL</strong>, including advanced indexing and performance tuning.
-      </li>
-      <li>
-        Led <strong>microservice security</strong> initiatives with bearer token–based auth, RBAC,
-        and consistent API gateway policies.
-      </li>
-      <li>
-        Designed and maintained <strong>Azure Data Factory (ADF)</strong>
-        pipelines, SSIS packages, and CI/CD automation for ADF-driven ETL.
-      </li>
-      <li>
-        Architected and delivered <strong>cloud-native financial data platforms</strong> using
-        Azure Data Factory, Azure Functions, SQL Server, Blob Storage, API Management, Application
-        Gateway, Key Vault, private networking, and .NET microservices.
-      </li>
-      <li>
-        Designed repeatable <strong>Azure infrastructure deployments</strong> with Bicep and
-        automation patterns for environment provisioning, network configuration, function app
-        infrastructure, API gateway routing, and release-ready deployment templates.
-      </li>
-      <li>
-        Led modernization of <strong>partner data-exchange and rewards processing workflows</strong>,
-        replacing legacy batch and warehouse-centered processes with orchestrated ADF pipelines,
-        microservices-managed SQL flows, secure file delivery, webhooks, and operational tooling.
-      </li>
-      <li>
-        Improved production reliability through <strong>observability, reconciliation, replay, and
-        backfill capabilities</strong> for high-impact data workflows, including health reporting,
-        Azure dashboards, monitoring alerts, reduced-noise logging, and release-safe database
-        deployment practices.
-      </li>
+      {% for item in job.highlights %}
+      <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
     </ul>
     <div class="pill-row">
-      <span class="pill">Java 17 / Spring Boot</span>
-      <span class="pill">.NET / Azure Functions</span>
-      <span class="pill">TypeScript / Node.js</span>
-      <span class="pill">AWS ECS</span>
-      <span class="pill">Azure Bicep</span>
-      <span class="pill">PostgreSQL</span>
-      <span class="pill">SQL Server</span>
-      <span class="pill">Azure Data Factory</span>
-      <span class="pill">API Management</span>
-      <span class="pill">CI/CD</span>
+      {% for tech in job.tech %}
+      <span class="pill">{{ tech }}</span>
+      {% endfor %}
     </div>
   </div>
-
-  <div class="card full-width">
-    <h3>Architect / Team Lead</h3>
-    <h4>2016 – 2021 · U.S. Department of the Treasury, Bureau of the Fiscal Service</h4>
-    <p class="subdued">
-      Led modernization of public-facing federal financial systems and identity platforms, bridging
-      mainframe, Java, and Azure.
-    </p>
-    <ul>
-      <li>
-        Led development of the
-        <strong>Savings Bond Valuation &amp; Verification (SBVV)</strong> tool, built on
-        <strong>C# / .NET Azure Functions</strong>, Angular, and Azure SQL for financial
-        institutions nationwide.
-      </li>
-      <li>
-        Served as lead architect/developer for the
-        <strong>Treasury Check Verification System (TCVS)</strong>, a fraud prevention platform on
-        Azure Functions, Azure SQL, and Angular.
-      </li>
-      <li>
-        Modernized a legacy <strong>Java Applet–based savings bond image viewer</strong> with a
-        Spring Boot backend and HTML5 Canvas UI, integrated with CICS and IBM MQ.
-      </li>
-      <li>
-        Integrated multiple applications with
-        <strong>CAIA (Common Approach to Identity Assurance)</strong> using standards-based OIDC and
-        strong MFA.
-      </li>
-      <li>
-        <strong>Pioneered Azure adoption</strong> within the bureau — designing, operating, and
-        governing its first production Azure environment, including ARM-based IaC and FedRAMP High
-        controls.
-      </li>
-      <li>
-        Championed <strong>MuleSoft ESB</strong> adoption, leading design and integration of
-        reusable enterprise APIs.
-      </li>
-    </ul>
-    <div class="pill-row">
-      <span class="pill">Azure Functions</span>
-      <span class="pill">Spring Boot</span>
-      <span class="pill">Angular</span>
-      <span class="pill">Azure SQL</span>
-      <span class="pill">MuleSoft ESB</span>
-      <span class="pill">CAIA / OIDC</span>
-    </div>
-  </div>
-
-  <div class="card full-width">
-    <h3>Developer / Senior Developer</h3>
-    <h4>2007 – 2016 · U.S. Department of the Treasury, Bureau of the Fiscal Service</h4>
-    <p class="subdued">
-      Built and maintained core Treasury systems across mainframe and Java stacks.
-    </p>
-    <ul>
-      <li>
-        Developed and maintained <strong>COBOL/CICS</strong> applications with
-        <strong>DB2</strong> backing high-value federal financial workflows.
-      </li>
-      <li>
-        Enhanced <strong>Java EE/WebSphere</strong> applications integrating with mainframe systems
-        via <strong>IBM MQ</strong>.
-      </li>
-      <li>
-        Delivered recurring releases for
-        <strong>TreasuryDirect.gov</strong>, including MFA, LexisNexis IDV, and tax reporting
-        enhancements.
-      </li>
-      <li>
-        Implemented utilities and services to digitize and serve
-        <strong>savings bond images</strong> with rich metadata for customer service teams.
-      </li>
-    </ul>
-    <div class="pill-row">
-      <span class="pill">COBOL / CICS</span>
-      <span class="pill">DB2</span>
-      <span class="pill">Java EE</span>
-      <span class="pill">TreasuryDirect.gov</span>
-    </div>
-  </div>
+  {% endfor %}
 </section>
 
 <!-- HIGH-IMPACT CONTRIBUTIONS -->
-<section>
+<section id="contributions">
   <h2>High-Impact Contributions</h2>
-
+  {% for item in site.data.contributions %}
   <div class="card full-width">
-    <h3>Savings Bond Valuation &amp; Verification (SBVV)</h3>
-    <p class="subdued">C# / .NET Azure Functions • Angular • Azure SQL • ARM • FedRAMP High</p>
-    <p>
-      Led the design and delivery of the
-      <strong>Savings Bond Valuation &amp; Verification (SBVV)</strong> tool for financial
-      institutions nationwide. Built on Azure using serverless compute, Angular, and Azure SQL, SBVV
-      enables tellers to instantly value and validate savings bonds and detect invalid or fraudulent
-      instruments.
-    </p>
+    <h3>{{ item.title }}</h3>
+    <p class="subdued">{{ item.stack }}</p>
+    {{ item.body | markdownify }}
   </div>
-
-  <div class="card full-width">
-    <h3>Treasury Check Verification System (TCVS)</h3>
-    <p class="subdued">C# / .NET Azure Functions • Azure SQL • Azure API Management • Angular</p>
-    <p>
-      Served as lead architect and developer for the
-      <strong>Treasury Check Verification System (TCVS)</strong>, created to combat fraud around
-      U.S. Treasury checks, including COVID-era relief payments. Implemented a real-time
-      verification API and web experience that helps financial institutions validate checks before
-      acceptance, preventing large-scale fraud.
-    </p>
-  </div>
-
-  <div class="card full-width">
-    <h3>Azure Cloud Platform Leadership @ Fiscal Service</h3>
-    <p class="subdued">
-      Azure App Service • Azure Functions • Azure SQL • ARM • Governance • FedRAMP High
-    </p>
-    <p>
-      <strong>Pioneered Azure adoption</strong> within the Bureau of the Fiscal Service, designing,
-      operating, and governing its first production Azure environment. Migrated billions of savings
-      bond records from DB2 to Azure SQL, implemented Infrastructure-as-Code with ARM, and managed
-      platform security, access, and policy under <strong>FedRAMP High</strong> requirements.
-    </p>
-  </div>
-
-  <div class="card full-width">
-    <h3>Energy-Sector Sustainability Platform & AWS Migration</h3>
-    <p class="subdued">
-      Java 17 / Spring Boot • AWS ECS • PostgreSQL • CI/CD • IoT &amp; reporting
-    </p>
-    <p>
-      For an energy-sector client, delivered major features for a
-      <strong>sustainability and emissions tracking platform</strong>, including emissions goal
-      modeling, rate calculations, and real-time meter data ingestion. Led the migration of the
-      platform to <strong>AWS ECS</strong> with full containerization and one-click CI/CD, and
-      designed <strong>PostgreSQL-backed reporting APIs</strong> with significant performance
-      tuning.
-    </p>
-  </div>
-
-  <div class="card full-width">
-    <h3>Cloud-Native Financial Data Platform Modernization</h3>
-    <p class="subdued">
-      Azure Data Factory • Azure Functions • SQL Server • Bicep • API Management • Key Vault
-    </p>
-    <p>
-      Architected and delivered secure Azure-based data platforms for financial workflows, replacing
-      legacy ETL and batch processes with observable, automated, cloud-native services. Designed
-      partner data-exchange patterns, rewards-processing pipelines, source-data ingestion,
-      reconciliation, replay/backfill utilities, and production-ready infrastructure using
-      <strong>ADF, Azure Functions, SQL Server, Bicep, Blob Storage, API Management, Application
-      Gateway, Key Vault, and private networking</strong>.
-    </p>
-  </div>
+  {% endfor %}
 </section>
 
 <!-- PERSONAL PROJECTS & HOMELAB -->
-<section>
+<section id="projects">
   <h2>Personal Projects &amp; Homelab</h2>
-
-  <div class="card full-width">
-    <h3>Chunking Collector — Open Source Java Library</h3>
-    <p class="subdued">Java 8+ • Stream API • Maven Central • Zero Dependencies</p>
-    <p>
-      <strong>Chunking Collector</strong> is a small, focused Java library that makes it easy to
-      turn streams and iterables into
-      <strong>fixed-size chunks, sliding windows, and weighted batches</strong> — without pulling in
-      a framework or runtime dependency.
-    </p>
-    <ul>
-      <li>
-        Fluent <strong>Stream API collectors</strong> for fixed-size chunks, sliding windows,
-        boundary-based grouping, and weighted chunks.
-      </li>
-      <li>
-        Convenience helpers for primitive streams:
-        <code>IntStream</code>, <code>LongStream</code>, and <code>DoubleStream</code>.
-      </li>
-      <li>
-        <strong>Zero dependencies</strong>, Java 8+ compatible, and designed to be dropped into
-        batch jobs, ETL flows, and microservices.
-      </li>
-    </ul>
-    <div class="pill-row">
-      <span class="pill">
-        <a
-          href="https://central.sonatype.com/artifact/dev.zachmaddox/chunking-collector/overview"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Maven Central</a
-        >
-      </span>
-      <span class="pill">
-        <a
-          href="https://zachmaddox.dev/ChunkingCollector/latest/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >JavaDoc</a
-        >
-      </span>
-      <span class="pill">
-        <a
-          href="https://github.com/zmad5306/ChunkingCollector"
-          target="_blank"
-          rel="noopener noreferrer"
-          >GitHub</a
-        >
-      </span>
-    </div>
-  </div>
-
-  <div class="card full-width">
-    <h3>Compose Reorderable Grid - Open Source Jetpack Compose Library</h3>
-    <p class="subdued">Kotlin • Jetpack Compose • Android • Maven Central</p>
-    <p>
-      <strong>Compose Reorderable Grid</strong> is a production-grade, long-press drag-and-drop grid
-      for <strong>Jetpack Compose</strong>. It provides smooth, predictable reordering with
-      auto-scroll support and stable gesture handling, extracted and refined from a real shipping
-      Android app.
-    </p>
-    <ul>
-      <li>
-        <strong>Silky-smooth drag-and-drop:</strong> natural item displacement with no flicker,
-        snapping, or gesture cancellation.
-      </li>
-      <li>
-        <strong>Production-tested:</strong> tuned on physical devices and large scrolling grids.
-      </li>
-      <li>
-        <strong>Compose-correct:</strong> avoids pointer restarts, stale lambdas, and recomposition
-        storms.
-      </li>
-      <li>
-        <strong>Small, focused API:</strong> designed to be easy to reason about and safe to adopt.
-      </li>
-    </ul>
-    <div class="pill-row">
-      <span class="pill">
-        <a
-          href="https://central.sonatype.com/artifact/dev.zachmaddox.compose/compose-reorderable-grid/overview"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Maven Central
-        </a>
-      </span>
-      <span class="pill">
-        <a
-          href="https://github.com/zmad5306/compose-reorderable-grid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </span>
-    </div>
-  </div>
-
-  <div class="card full-width">
-    <h3>Score Card — Observability-Driven Distributed Transaction Engine</h3>
-    <p class="subdued">
-      Java 17 • Spring Boot • JMS / ActiveMQ • REST API • OpenAPI • PostgreSQL • Docker
-    </p>
-
-    <p>
-      <strong>Score Card</strong> is a research project and working prototype that explores a new
-      way to manage <strong>complex, cross-service transactions</strong> without relying on
-      heavyweight orchestration, 2PC, or tightly coupled saga coordinators. Instead of forcing
-      microservices to participate in a global transaction, Score Card uses
-      <strong>observability, correlation, and dependency-aware authorization</strong> to reconstruct
-      and reason about multi-step workflows as they unfold.
-    </p>
-
-    <p>
-      At its core, Score Card models a transaction as a graph of actions across independent
-      services. Each service performs its work autonomously and reports status updates back to the
-      Score Card engine, which assembles a real-time view of the end-to-end flow. This enables
-      <strong>failure detection, auditing, recovery, and compensation</strong> without sacrificing
-      service autonomy or scalability.
-    </p>
-
-    <ul>
-      <li>
-        <strong>Explicit workflow modeling:</strong> services, actions, dependencies, and
-        transaction blueprints definable via REST or UI.
-      </li>
-      <li>
-        <strong>Loose coupling:</strong> microservices stay independent; Score Card coordinates
-        using messages and correlation IDs.
-      </li>
-      <li>
-        <strong>Real-time observability:</strong> action states, timestamps, metadata, and outcomes
-        tracked in PostgreSQL.
-      </li>
-      <li>
-        <strong>Resilience & recovery:</strong> compensating transactions (e.g., reversing a
-        financial debit) triggered from observed failures.
-      </li>
-      <li>
-        <strong>Developer UIs included:</strong> a model portal and a live scoreboard for monitoring
-        transaction execution.
-      </li>
-      <li>
-        <strong>Example microservices:</strong> including a banking transfer scenario demonstrating
-        sequencing, retries, and compensation.
-      </li>
-    </ul>
-
-    <div class="pill-row">
-      <span class="pill">
-        <a href="https://github.com/zmad5306/ScoreCard" target="_blank" rel="noopener noreferrer">
-          GitHub Repo
-        </a>
-      </span>
-
-      <span class="pill">
-        <a
-          href="https://zachmaddox.dev/blog/2025/12/14/score-card.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Project Blog Post
-        </a>
-      </span>
-    </div>
-  </div>
-
+  {% for project in site.data.projects %}
   <div class="card full-width">
     <h3>
-      <a href="https://actionwatch.dev" target="_blank" rel="noopener noreferrer"> ActionWatch </a>
-      — Real Observability for GitHub Actions
+      {% if project.url %}
+      <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
+      {% else %}{{ project.title }}{% endif %}
+      {% if project.subtitle %}— {{ project.subtitle }}{% endif %}
     </h3>
-    <p class="subdued">
-      React • TypeScript • Vite • C# / .NET 10 • GraphQL • SignalR • GitHub Webhooks • PostgreSQL •
-      TimescaleDB • Redis
-    </p>
-    <p>
-      <strong>ActionWatch</strong> is a platform for understanding what is really happening inside
-      <strong>GitHub Actions</strong>. It turns webhook-driven workflow activity into live
-      operational visibility, historical analytics, and dashboards that help teams debug failures,
-      track reliability, and understand CI/CD behavior over time.
-    </p>
-    <p>
-      Built as a modular monolith, it combines a React frontend, a .NET backend, GraphQL-powered
-      analytics reads, realtime updates over SignalR, and a Timescale-backed data platform for
-      durable event and trend analysis.
-    </p>
-    <p>
-      ActionWatch is also a showcase for AI-augmented engineering in practice:
-      <strong>100% AI-coded</strong>, with the architecture, intent, and final engineering judgment
-      driven by me. I wrote about that workflow
-      <a
-        href="https://zachmaddox.dev/blog/2026/04/11/ai-junior-dev-workflow.html"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        here </a
-      >.
-    </p>
+    <p class="subdued">{{ project.stack }}</p>
+    {{ project.body | markdownify }}
+    {% if project.bullets %}
+    <ul>
+      {% for bullet in project.bullets %}
+      <li>{{ bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if project.links %}
+    <div class="pill-row">
+      {% for link in project.links %}
+      {% assign first_char = link.url | slice: 0, 1 %}
+      <span class="pill">
+        {% if first_char == '/' %}
+        <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+        {% else %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+        {% endif %}
+      </span>
+      {% endfor %}
+    </div>
+    {% endif %}
   </div>
-
-  <div class="card full-width">
-    <h3>Homelab &amp; Self-Hosted Cloud</h3>
-    <p class="subdued">Linux • Docker • Docker Compose • WireGuard • Nextcloud • Pi-hole</p>
-    <p>
-      I operate a personal <strong>Linux server</strong> hosting a suite of
-      <strong>containerized services</strong>, including Nextcloud, Pi-hole, WireGuard VPN, and
-      monitoring tools. This homelab serves as a sandbox for experimenting with container
-      orchestration, networking, automation, and secure self-hosting — and keeps my personal
-      infrastructure fully under my control.
-    </p>
-  </div>
+  {% endfor %}
 </section>
 
 <!-- CERTIFICATIONS -->
-<section>
+<section id="certifications">
   <h2>Certifications</h2>
   <div class="skills-grid certifications">
+    {% for cert in site.data.certifications %}
     <div class="card">
-      <h3>☕ Azul PartnerConnect</h3>
+      <h3>{{ cert.issuer }}</h3>
       <p>
-        Certified OpenJDK Migration Services Partner (2024)<br />
-        Certified OpenJDK Migration Advisory Partner (2024)<br />
-        Platform Prime Certified Partner Engineer (2024)<br />
-        Platform Core Certified Partner Engineer (2024)
+        {% for item in cert.items %}{{ item.name }} ({{ item.year }}){% unless forloop.last %}<br />{% endunless %}{% endfor %}
       </p>
     </div>
-
-    <div class="card">
-      <h3>☁️ Microsoft Azure</h3>
-      <p>
-        Microsoft Certified: Azure Solutions Architect Expert (2023)<br />
-        Microsoft Certified: Azure Administrator Associate (2023)
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🌀 Scrum Alliance</h3>
-      <p>Certified ScrumMaster (CSM) (2019)</p>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <!-- EDUCATION -->
-<section>
+<section id="education">
   <h2>Education</h2>
+  {% for entry in site.data.education %}
   <div class="card full-width">
-    <h3>Master of Information Systems Management</h3>
-    <h4>2009 · Keller Graduate School of Management</h4>
-    <p class="subdued">
-      Focused on information systems strategy, management, and the alignment of technology with
-      business goals.
-    </p>
+    <h3>{{ entry.degree }}</h3>
+    <h4>{{ entry.year }} · {{ entry.school }}</h4>
+    <p class="subdued">{{ entry.note }}</p>
   </div>
-  <div class="card full-width">
-    <h3>Bachelor of Science in Computer Information Systems</h3>
-    <h4>2007 · DeVry University</h4>
-    <p class="subdued">
-      Emphasis on software development, object-oriented programming, and web technologies.
-    </p>
-  </div>
-  <div class="card full-width">
-    <h3>Associate of Applied Business in Computer Systems/Programming</h3>
-    <h4>2004 · Washington State Community College</h4>
-    <p class="subdued">Foundation in programming, databases, and business computing.</p>
-  </div>
+  {% endfor %}
 </section>

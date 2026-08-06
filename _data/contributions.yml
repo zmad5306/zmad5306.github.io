@@ -1,0 +1,48 @@
+# High-impact contributions — card grid. `body` is markdown. Content unchanged.
+- title: Savings Bond Valuation & Verification (SBVV)
+  stack: C# / .NET Azure Functions • Angular • Azure SQL • ARM • FedRAMP High
+  body: >-
+    Led the design and delivery of the **Savings Bond Valuation & Verification
+    (SBVV)** tool for financial institutions nationwide. Built on Azure using
+    serverless compute, Angular, and Azure SQL, SBVV enables tellers to
+    instantly value and validate savings bonds and detect invalid or fraudulent
+    instruments.
+
+- title: Treasury Check Verification System (TCVS)
+  stack: C# / .NET Azure Functions • Azure SQL • Azure API Management • Angular
+  body: >-
+    Served as lead architect and developer for the **Treasury Check
+    Verification System (TCVS)**, created to combat fraud around U.S. Treasury
+    checks, including COVID-era relief payments. Implemented a real-time
+    verification API and web experience that helps financial institutions
+    validate checks before acceptance, preventing large-scale fraud.
+
+- title: Azure Cloud Platform Leadership @ Fiscal Service
+  stack: Azure App Service • Azure Functions • Azure SQL • ARM • Governance • FedRAMP High
+  body: >-
+    **Pioneered Azure adoption** within the Bureau of the Fiscal Service,
+    designing, operating, and governing its first production Azure environment.
+    Migrated billions of savings bond records from DB2 to Azure SQL,
+    implemented Infrastructure-as-Code with ARM, and managed platform security,
+    access, and policy under **FedRAMP High** requirements.
+
+- title: Energy-Sector Sustainability Platform & AWS Migration
+  stack: Java 17 / Spring Boot • AWS ECS • PostgreSQL • CI/CD • IoT & reporting
+  body: >-
+    For an energy-sector client, delivered major features for a
+    **sustainability and emissions tracking platform**, including emissions
+    goal modeling, rate calculations, and real-time meter data ingestion. Led
+    the migration of the platform to **AWS ECS** with full containerization and
+    one-click CI/CD, and designed **PostgreSQL-backed reporting APIs** with
+    significant performance tuning.
+
+- title: Cloud-Native Financial Data Platform Modernization
+  stack: Azure Data Factory • Azure Functions • SQL Server • Bicep • API Management • Key Vault
+  body: >-
+    Architected and delivered secure Azure-based data platforms for financial
+    workflows, replacing legacy ETL and batch processes with observable,
+    automated, cloud-native services. Designed partner data-exchange patterns,
+    rewards-processing pipelines, source-data ingestion, reconciliation,
+    replay/backfill utilities, and production-ready infrastructure using **ADF,
+    Azure Functions, SQL Server, Bicep, Blob Storage, API Management,
+    Application Gateway, Key Vault, and private networking**.

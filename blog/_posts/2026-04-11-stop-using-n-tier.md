@@ -1,6 +1,7 @@
 ---
 title: "Stop Using N-Tier — Structure Your Monorepo Around Reality Instead"
 description: "Why n-tier architecture breaks down in modern monorepos, and a better way to organize your code around deployables, capabilities, and boundaries."
+tags: [architecture, monorepo]
 ---
 
 If you’ve worked on more than a few codebases, you’ve seen it:

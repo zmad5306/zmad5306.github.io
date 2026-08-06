@@ -1,6 +1,7 @@
 ---
 title: "Chunking Java Streams the Right Way — A Collector That Feels Like It Should Be in the JDK"
 description: "A deep dive into efficient chunking patterns in Java Streams, why they matter, and how to build a collector that feels like native JDK functionality."
+tags: [java, streams, open-source]
 ---
 
 If you've ever needed to split a large list or stream into evenly sized chunks, you already know the pain:

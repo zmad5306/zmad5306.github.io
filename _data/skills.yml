@@ -1,0 +1,118 @@
+# Skill groups for the main page. `primary: true` groups render expanded;
+# the rest collapse behind "show all". Content unchanged from the old page.
+- name: Programming Languages
+  primary: true
+  skills:
+    - Java
+    - "C#"
+    - Python
+    - Kotlin
+    - JavaScript
+    - TypeScript
+    - SQL
+
+- name: Frameworks & Platforms
+  primary: true
+  skills:
+    - Spring Boot
+    - .NET / ASP.NET Core
+    - Node.js / Express
+    - Angular
+    - React
+    - Azure Functions
+    - Tailwind CSS
+    - Zustand
+    - MuleSoft ESB
+    - Flask
+
+- name: Cloud Platforms & Services
+  primary: true
+  skills:
+    - Azure
+    - Azure ARM
+    - Azure Bicep
+    - Azure API Management
+    - Azure Application Gateway
+    - Azure Blob Storage
+    - AWS
+    - AWS Cloud Formation
+    - AWS CDK
+    - GCP
+    - AWS Lambda
+    - AWS Fargate
+    - AWS EKS
+    - Azure AKS
+    - Heroku
+
+- name: Architecture & Design
+  primary: true
+  skills:
+    - Application architecture
+    - Cloud architecture
+    - Microservice architecture
+    - API design
+    - Event-driven systems
+    - Observability
+    - Maintainability
+
+- name: Database & Storage
+  skills:
+    - PostgreSQL
+    - SQL Server
+    - DB2
+    - Oracle
+    - TimescaleDB
+    - MongoDB
+    - Redis
+
+- name: Eventing & Messaging
+  skills:
+    - Amazon Kinesis
+    - Azure Event Hubs
+    - RabbitMQ
+    - Active MQ
+    - Amazon SQS
+    - Amazon SNS
+
+- name: DevOps & Automation
+  skills:
+    - Docker
+    - Kubernetes
+    - Azure DevOps
+    - Bitbucket
+    - GitHub
+    - GitHub Actions
+    - GitLab CI
+    - Jenkins
+    - Trunk-based development
+    - Feature flags
+    - Blue/green releases
+
+- name: Security & Identity
+  skills:
+    - OAuth2 / OIDC
+    - Bearer tokens
+    - RBAC
+    - CAIA integration
+    - FedRAMP High
+    - Secure API gateways
+    - Hashicorp Vault
+    - Azure Key Vault
+    - AWS Secrets Manager
+    - Private networking
+    - mTLS
+    - PKI management
+
+- name: Data Engineering & Analytics
+  skills:
+    - Azure Data Factory
+    - SSIS
+    - ETL orchestration
+    - Partner data exchange
+    - Reconciliation workflows
+    - Replay / backfill tooling
+    - SQL optimization
+    - Schema design
+    - Data modeling
+    - Debezium
+    - AWS DMS

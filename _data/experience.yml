@@ -1,0 +1,123 @@
+# Work history, newest first. `highlights` are markdown. Content unchanged.
+- role: Senior Software Engineer / Architect
+  company: JBS.dev
+  start: "2021"
+  end: Present
+  summary: >-
+    Consulting across architecture, backend, DevOps, and data engineering —
+    with a focus on cloud-first, secure, and reliable systems.
+  highlights:
+    - >-
+      Delivered major features for an **energy-sector sustainability platform**,
+      including emissions tracking, goal modeling, and IoT-driven energy data.
+    - >-
+      Built backend microservices in **Java (Spring Boot)**, with supporting
+      **Python** services for data ingestion and reporting.
+    - >-
+      Migrated the client's stack to **AWS ECS**, introducing full
+      **containerization** and **one-click CI/CD automation**.
+    - >-
+      Designed and implemented **real-time reporting APIs** and dashboards
+      backed by **PostgreSQL**, including advanced indexing and performance
+      tuning.
+    - >-
+      Led **microservice security** initiatives with bearer token–based auth,
+      RBAC, and consistent API gateway policies.
+    - >-
+      Designed and maintained **Azure Data Factory (ADF)** pipelines, SSIS
+      packages, and CI/CD automation for ADF-driven ETL.
+    - >-
+      Architected and delivered **cloud-native financial data platforms** using
+      Azure Data Factory, Azure Functions, SQL Server, Blob Storage, API
+      Management, Application Gateway, Key Vault, private networking, and .NET
+      microservices.
+    - >-
+      Designed repeatable **Azure infrastructure deployments** with Bicep and
+      automation patterns for environment provisioning, network configuration,
+      function app infrastructure, API gateway routing, and release-ready
+      deployment templates.
+    - >-
+      Led modernization of **partner data-exchange and rewards processing
+      workflows**, replacing legacy batch and warehouse-centered processes with
+      orchestrated ADF pipelines, microservices-managed SQL flows, secure file
+      delivery, webhooks, and operational tooling.
+    - >-
+      Improved production reliability through **observability, reconciliation,
+      replay, and backfill capabilities** for high-impact data workflows,
+      including health reporting, Azure dashboards, monitoring alerts,
+      reduced-noise logging, and release-safe database deployment practices.
+  tech:
+    - Java 17 / Spring Boot
+    - .NET / Azure Functions
+    - TypeScript / Node.js
+    - AWS ECS
+    - Azure Bicep
+    - PostgreSQL
+    - SQL Server
+    - Azure Data Factory
+    - API Management
+    - CI/CD
+
+- role: Architect / Team Lead
+  company: U.S. Department of the Treasury, Bureau of the Fiscal Service
+  start: "2016"
+  end: "2021"
+  summary: >-
+    Led modernization of public-facing federal financial systems and identity
+    platforms, bridging mainframe, Java, and Azure.
+  highlights:
+    - >-
+      Led development of the **Savings Bond Valuation & Verification (SBVV)**
+      tool, built on **C# / .NET Azure Functions**, Angular, and Azure SQL for
+      financial institutions nationwide.
+    - >-
+      Served as lead architect/developer for the **Treasury Check Verification
+      System (TCVS)**, a fraud prevention platform on Azure Functions, Azure
+      SQL, and Angular.
+    - >-
+      Modernized a legacy **Java Applet–based savings bond image viewer** with
+      a Spring Boot backend and HTML5 Canvas UI, integrated with CICS and IBM
+      MQ.
+    - >-
+      Integrated multiple applications with **CAIA (Common Approach to Identity
+      Assurance)** using standards-based OIDC and strong MFA.
+    - >-
+      **Pioneered Azure adoption** within the bureau — designing, operating,
+      and governing its first production Azure environment, including ARM-based
+      IaC and FedRAMP High controls.
+    - >-
+      Championed **MuleSoft ESB** adoption, leading design and integration of
+      reusable enterprise APIs.
+  tech:
+    - Azure Functions
+    - Spring Boot
+    - Angular
+    - Azure SQL
+    - MuleSoft ESB
+    - CAIA / OIDC
+
+- role: Developer / Senior Developer
+  company: U.S. Department of the Treasury, Bureau of the Fiscal Service
+  start: "2007"
+  end: "2016"
+  summary: >-
+    Built and maintained core Treasury systems across mainframe and Java
+    stacks.
+  highlights:
+    - >-
+      Developed and maintained **COBOL/CICS** applications with **DB2** backing
+      high-value federal financial workflows.
+    - >-
+      Enhanced **Java EE/WebSphere** applications integrating with mainframe
+      systems via **IBM MQ**.
+    - >-
+      Delivered recurring releases for **TreasuryDirect.gov**, including MFA,
+      LexisNexis IDV, and tax reporting enhancements.
+    - >-
+      Implemented utilities and services to digitize and serve **savings bond
+      images** with rich metadata for customer service teams.
+  tech:
+    - COBOL / CICS
+    - DB2
+    - Java EE
+    - TreasuryDirect.gov
