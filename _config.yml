@@ -17,6 +17,10 @@ collections:
 
 defaults:
   - scope:
+      path: ""
+    values:
+      image: /assets/og-default.png
+  - scope:
       path: "blog"
       type: "posts"
     values:

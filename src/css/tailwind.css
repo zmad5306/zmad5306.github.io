@@ -1,3 +1,6 @@
+@import './syntax.css';
+@import './post.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

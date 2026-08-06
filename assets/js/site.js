@@ -232,4 +232,67 @@
       if (empty) empty.hidden = !q || any;
     });
   })();
+
+  /* ----------------------------------------------------------------------
+     Blog index tag filter.
+     ---------------------------------------------------------------------- */
+  (function tagFilter() {
+    var bar = document.getElementById('tag-filter');
+    var list = document.getElementById('post-list');
+    if (!bar || !list) return;
+    bar.hidden = false;
+
+    var buttons = Array.prototype.slice.call(bar.querySelectorAll('.tag-filter-btn'));
+    var cards = Array.prototype.slice.call(list.querySelectorAll('.post-card'));
+
+    bar.addEventListener('click', function (event) {
+      var button = event.target.closest('.tag-filter-btn');
+      if (!button) return;
+      var tag = button.getAttribute('data-tag');
+
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b === button));
+      });
+
+      cards.forEach(function (card) {
+        var tags = (card.getAttribute('data-tags') || '').split(' ');
+        card.classList.toggle('hidden', Boolean(tag) && tags.indexOf(tag) === -1);
+      });
+    });
+  })();
+
+  /* ----------------------------------------------------------------------
+     Copy buttons on code blocks.
+     ---------------------------------------------------------------------- */
+  (function copyButtons() {
+    if (!navigator.clipboard) return;
+    var blocks = document.querySelectorAll('.post-body div.highlighter-rouge');
+
+    var copyIcon =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+
+    blocks.forEach(function (block) {
+      var code = block.querySelector('pre code, pre');
+      if (!code) return;
+
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'code-copy';
+      button.innerHTML = copyIcon + '<span>copy</span>';
+      button.setAttribute('aria-label', 'Copy code to clipboard');
+
+      button.addEventListener('click', function () {
+        navigator.clipboard.writeText(code.innerText).then(function () {
+          button.classList.add('copied');
+          button.querySelector('span').textContent = 'copied';
+          window.setTimeout(function () {
+            button.classList.remove('copied');
+            button.querySelector('span').textContent = 'copy';
+          }, 1600);
+        });
+      });
+
+      block.appendChild(button);
+    });
+  })();
 })();

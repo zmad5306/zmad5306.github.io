@@ -70,34 +70,10 @@ The services still own the work. Score Card owns the **story**.
 
 Score Card is deliberately modular. Here’s the big picture, simplified:
 
-```mermaid
-graph LR
-  subgraph Core
-    API[Score Card API<br/>Core engine]
-    DB[(PostgreSQL<br/>ScoreCard schema)]
-    API --> DB
-  end
-
-  subgraph UIs
-    MON[Monitor<br/>Live scoreboard]
-    PORT[Portal<br/>Model designer]
-  end
-
-  subgraph ExampleServices[Example services]
-    SVC1[Service1<br/>3-step demo]
-    BANK[Account Service<br/>Bank transfer]
-  end
-
-  Client[Client apps] --> API
-  PORT --> API
-  MON --> API
-
-  API -->|JMS messages| SVC1
-  API -->|JMS messages| BANK
-
-  SVC1 -->|Status updates| API
-  BANK -->|Status updates<br/>+ metadata| API
-```
+<figure class="diagram">
+  <img src="/assets/images/diagrams/score-card-architecture.svg" alt="Score Card architecture diagram. Client apps, the Portal model-designer UI, and the Monitor live scoreboard all call the Score Card API, a core engine backed by a PostgreSQL ScoreCard schema. The API exchanges JMS messages with example services — a three-step demo service and a bank-transfer account service — which report status updates and metadata back to the API." loading="lazy" width="910" height="683" />
+  <figcaption class="sr-only">Score Card system architecture</figcaption>
+</figure>
 
 At the center is the **Core API** — a Spring Boot service backed by PostgreSQL and ActiveMQ. It exposes REST endpoints for managing:
 

@@ -1,0 +1,26 @@
+<article
+  class="panel panel-hover post-card p-6"
+  {% if include.post.tags.size > 0 %}data-tags="{{ include.post.tags | join: ' ' }}"{% endif %}
+>
+  <p class="font-mono text-xs text-muted">
+    <time datetime="{{ include.post.date | date_to_xmlschema }}"
+      >{{ include.post.date | date: "%B %-d, %Y" }}</time
+    >
+    &nbsp;·&nbsp; {% include reading-time.html content=include.post.content %}
+  </p>
+  <h3 class="mt-2 text-xl leading-snug">
+    <a href="{{ include.post.url | relative_url }}" class="text-text no-underline hover:text-primary hover:no-underline"
+      >{{ include.post.title }}</a
+    >
+  </h3>
+  <p class="mt-3 text-sm text-muted">
+    {{ include.post.description | default: include.post.excerpt | strip_html | truncate: 200 }}
+  </p>
+  {% if include.post.tags.size > 0 %}
+  <ul class="mt-4 flex flex-wrap gap-1.5">
+    {% for tag in include.post.tags %}
+    <li><a href="{{ '/blog/tags/' | append: tag | append: '/' | relative_url }}" class="chip no-underline hover:border-primary hover:text-text hover:no-underline">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>

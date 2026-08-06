@@ -1,0 +1,122 @@
+/* ---------------------------------------------------------------------------
+   Rouge syntax theme, built from the site palette.
+   Low-contrast and cool: violet keywords, steel-blue strings, brass numbers,
+   muted teal types. Code blocks stay on the dark surface in BOTH themes —
+   one contrast model, no neon.
+   --------------------------------------------------------------------------- */
+:root {
+  --code-bg: #13111c;
+  --code-border: #2a2438;
+  --code-text: #d6d3e0;
+  --code-muted: #66627a;
+  --code-keyword: #9d8ce8;
+  --code-string: #82a5c8;
+  --code-number: #bfa37a;
+  --code-type: #8fb5ad;
+  --code-func: #b9b2d8;
+  --code-error: #c58a8a;
+}
+
+.highlight,
+pre.highlight {
+  background: var(--code-bg);
+  color: var(--code-text);
+}
+
+div.highlighter-rouge {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+div.highlighter-rouge pre {
+  overflow-x: auto;
+  border: 1px solid var(--code-border);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* inline code */
+code.highlighter-rouge {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  padding: 0.1em 0.35em;
+  font-size: 0.85em;
+}
+
+/* --- Rouge token map ------------------------------------------------------ */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs,
+.highlight .cd { color: var(--code-muted); font-style: italic; } /* comments */
+.highlight .cp { color: var(--code-muted); }                     /* preproc */
+
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kv { color: var(--code-keyword); }
+.highlight .kt { color: var(--code-type); }                      /* type kw */
+
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb,
+.highlight .sc, .highlight .sd, .highlight .sh, .highlight .si,
+.highlight .sx, .highlight .sr, .highlight .ss { color: var(--code-string); }
+.highlight .se { color: var(--code-number); }                    /* escapes */
+
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh,
+.highlight .mi, .highlight .il, .highlight .mo,
+.highlight .mx { color: var(--code-number); }
+
+.highlight .nc, .highlight .nn { color: var(--code-type); }      /* class/ns */
+.highlight .nf, .highlight .fm { color: var(--code-func); }      /* function */
+.highlight .nd { color: var(--code-keyword); }                   /* decorator */
+.highlight .nt { color: var(--code-keyword); }                   /* html tag */
+.highlight .na { color: var(--code-func); }                      /* attr */
+.highlight .nb, .highlight .bp { color: var(--code-type); }      /* builtin */
+.highlight .no, .highlight .nv, .highlight .vc, .highlight .vg,
+.highlight .vi { color: var(--code-text); }
+
+.highlight .o, .highlight .ow, .highlight .p,
+.highlight .pi { color: var(--code-text); }
+
+.highlight .err { color: var(--code-error); background: transparent; }
+.highlight .gd { color: var(--code-error); }                     /* diff del */
+.highlight .gi { color: var(--code-type); }                      /* diff ins */
+.highlight .gh, .highlight .gu { color: var(--code-muted); font-weight: 600; }
+.highlight .gp { color: var(--code-muted); }                     /* prompt */
+
+/* --- copy button (injected by JS) ---------------------------------------- */
+.code-copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid var(--code-border);
+  border-radius: 0.25rem;
+  background: var(--code-bg);
+  color: var(--code-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.code-copy svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+div.highlighter-rouge:hover .code-copy,
+.code-copy:focus-visible {
+  opacity: 1;
+}
+
+.code-copy:hover {
+  color: var(--code-text);
+  border-color: var(--code-keyword);
+}
+
+.code-copy.copied {
+  color: var(--code-type);
+  opacity: 1;
+}

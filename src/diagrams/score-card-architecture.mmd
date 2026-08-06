@@ -1,0 +1,26 @@
+graph LR
+  subgraph Core
+    API[Score Card API<br/>Core engine]
+    DB[(PostgreSQL<br/>ScoreCard schema)]
+    API --> DB
+  end
+
+  subgraph UIs
+    MON[Monitor<br/>Live scoreboard]
+    PORT[Portal<br/>Model designer]
+  end
+
+  subgraph ExampleServices[Example services]
+    SVC1[Service1<br/>3-step demo]
+    BANK[Account Service<br/>Bank transfer]
+  end
+
+  Client[Client apps] --> API
+  PORT --> API
+  MON --> API
+
+  API -->|JMS messages| SVC1
+  API -->|JMS messages| BANK
+
+  SVC1 -->|Status updates| API
+  BANK -->|Status updates<br/>+ metadata| API
