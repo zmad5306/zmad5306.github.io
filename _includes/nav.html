@@ -1,6 +1,6 @@
 <header
   id="site-header"
-  class="fixed inset-x-0 top-0 z-50 border-b border-border bg-bg/90 backdrop-blur transition-all"
+  class="fixed inset-x-0 top-0 z-50 border-b border-border transition-all"
 >
   <nav
     class="site-nav mx-auto flex max-w-5xl items-center justify-between px-5 py-4 transition-all"
@@ -51,23 +51,25 @@
       </button>
     </div>
   </nav>
-
-  <div
-    id="mobile-menu"
-    class="fixed inset-0 top-[57px] z-40 hidden flex-col bg-bg md:hidden"
-  >
-    <ul class="flex flex-col gap-1 px-5 py-6">
-      {% for link in site.data.navigation %}
-      <li>
-        <a
-          href="{{ link.url | relative_url }}"
-          class="mobile-nav-link block rounded px-3 py-3 font-display text-xl text-text no-underline hover:bg-surface-2 hover:no-underline"
-          >{{ link.label }}</a
-        >
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
 </header>
+
+<!-- Outside <header>: its backdrop-filter would otherwise become the
+     containing block for this fixed overlay and collapse it. -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-40 hidden flex-col overflow-y-auto bg-bg pt-[57px] md:hidden"
+>
+  <ul class="flex flex-col gap-1 px-5 py-6">
+    {% for link in site.data.navigation %}
+    <li>
+      <a
+        href="{{ link.url | relative_url }}"
+        class="mobile-nav-link block rounded px-3 py-3 font-display text-xl text-text no-underline hover:bg-surface-2 hover:no-underline"
+        >{{ link.label }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 <!-- spacer so content clears the fixed header -->
 <div aria-hidden="true" class="h-[57px]"></div>
