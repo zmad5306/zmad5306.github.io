@@ -1,0 +1,96 @@
+/* ---------------------------------------------------------------------------
+   Print: the home page becomes a clean résumé; posts print as clean articles.
+   site.js opens all <details> on beforeprint so collapsed content prints.
+   --------------------------------------------------------------------------- */
+@media print {
+  :root {
+    --bg: #ffffff !important;
+    --surface: #ffffff !important;
+    --surface-2: #ffffff !important;
+    --border: #bbbbbb !important;
+    --text: #000000 !important;
+    --text-muted: #444444 !important;
+    --primary: #000000 !important;
+    --primary-deep: #000000 !important;
+    --primary-dim: #dddddd !important;
+    --accent: #000000 !important;
+    --link: #000000 !important;
+  }
+
+  #site-header,
+  footer,
+  .skip-link,
+  #theme-toggle,
+  #menu-toggle,
+  #skills-filter,
+  #tag-filter,
+  .code-copy,
+  .post-toc,
+  .hero-texture .btn-primary,
+  .hero-texture .btn-outline {
+    display: none !important;
+  }
+
+  body {
+    font-size: 10.5pt;
+    line-height: 1.45;
+    background: #fff;
+    color: #000;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  section,
+  article {
+    padding-top: 1.2rem !important;
+    break-inside: auto;
+  }
+
+  .panel,
+  .panel-hover {
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+    transform: none !important;
+    break-inside: avoid;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-texture {
+    background-image: none !important;
+    border-bottom: 2px solid #000;
+  }
+
+  .hero-texture > .relative {
+    background: none !important;
+  }
+
+  details > summary {
+    display: none !important;
+  }
+
+  details[open] > summary ~ * {
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000 !important;
+  }
+
+  .highlight,
+  pre.highlight,
+  div.highlighter-rouge pre {
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+  }
+
+  .highlight * {
+    color: #000 !important;
+  }
+}

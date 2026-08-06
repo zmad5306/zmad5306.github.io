@@ -23,13 +23,13 @@ permalink: /blog/
 
   <ul id="tag-filter" class="mt-8 flex flex-wrap gap-1.5" hidden>
     <li>
-      <button type="button" data-tag="" aria-pressed="true" class="tag-filter-btn chip cursor-pointer transition-colors hover:border-primary hover:text-text aria-pressed:border-primary aria-pressed:text-primary">
+      <button type="button" data-tag="" aria-pressed="true" class="tag-filter-btn chip cursor-pointer transition-colors hover:border-primary hover:text-text aria-pressed:border-primary aria-pressed:text-link">
         all
       </button>
     </li>
     {% for tag in all_tags %}
     <li>
-      <button type="button" data-tag="{{ tag }}" aria-pressed="false" class="tag-filter-btn chip cursor-pointer transition-colors hover:border-primary hover:text-text aria-pressed:border-primary aria-pressed:text-primary">
+      <button type="button" data-tag="{{ tag }}" aria-pressed="false" class="tag-filter-btn chip cursor-pointer transition-colors hover:border-primary hover:text-text aria-pressed:border-primary aria-pressed:text-link">
         {{ tag }}
       </button>
     </li>

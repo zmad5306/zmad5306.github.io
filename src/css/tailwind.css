@@ -1,5 +1,6 @@
 @import './syntax.css';
 @import './post.css';
+@import './print.css';
 
 @tailwind base;
 @tailwind components;
@@ -24,6 +25,8 @@
     --primary-deep: #4b3a9e;
     --primary-dim: #2e2456;
     --accent: #b08d57;
+    /* body-text link color: --primary fails 4.5:1 on dark bg, this passes */
+    --link: #8f7bdf;
 
     /* derived, not thematic: focus ring + selection */
     --ring: var(--primary);
@@ -43,6 +46,7 @@
     --primary-deep: #4b3a9e;
     --primary-dim: #e4dff2;
     --accent: #8a6a3b;
+    --link: #5b3fbf;
 
     --selection-bg: #d8d1ec;
   }
@@ -63,6 +67,7 @@
       --primary-deep: #4b3a9e;
       --primary-dim: #e4dff2;
       --accent: #8a6a3b;
+      --link: #5b3fbf;
 
       --selection-bg: #d8d1ec;
     }
@@ -154,7 +159,7 @@
   }
 
   a {
-    @apply text-primary underline-offset-4 transition-colors;
+    @apply text-link underline-offset-4 transition-colors;
   }
 
   a:hover {
@@ -198,7 +203,7 @@
   }
 
   .link-pill {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 font-mono text-xs text-primary no-underline transition-colors;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 font-mono text-xs text-link no-underline transition-colors;
   }
 
   .link-pill:hover {
@@ -247,7 +252,7 @@
   }
 
   .prose-body a {
-    @apply text-primary;
+    @apply text-link;
   }
 
   /* Section reveal on scroll. Only applies when JS is running; fully

@@ -295,4 +295,27 @@
       block.appendChild(button);
     });
   })();
+
+  /* ----------------------------------------------------------------------
+     Open all collapsed sections when printing so nothing is cut from the
+     printed résumé/article; restore afterwards.
+     ---------------------------------------------------------------------- */
+  (function printExpand() {
+    var touched = [];
+
+    window.addEventListener('beforeprint', function () {
+      touched = [];
+      document.querySelectorAll('details:not([open])').forEach(function (d) {
+        d.open = true;
+        touched.push(d);
+      });
+    });
+
+    window.addEventListener('afterprint', function () {
+      touched.forEach(function (d) {
+        d.open = false;
+      });
+      touched = [];
+    });
+  })();
 })();

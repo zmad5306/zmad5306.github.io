@@ -5,7 +5,7 @@
     <article class="panel panel-hover p-6">
       <h3>
         {% if project.url %}
-        <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary">{{ project.title }}</a>
+        <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer" class="text-text hover:text-link">{{ project.title }}</a>
         {% else %}{{ project.title }}{% endif %}
         {% if project.subtitle %}
         <span class="block pt-1 font-sans text-sm font-normal text-muted sm:inline sm:pt-0 sm:before:content-['—_']">{{ project.subtitle }}</span>

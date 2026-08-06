@@ -14,7 +14,7 @@
           <a
             href="{% if first_char == '/' %}{{ item.url | relative_url }}{% else %}{{ item.url }}{% endif %}"
             {% unless first_char == '/' or item.icon == 'email' %}target="_blank" rel="noopener noreferrer"{% endunless %}
-            class="inline-flex h-9 w-9 items-center justify-center rounded text-muted transition-colors hover:bg-surface-2 hover:text-primary [&_svg]:h-4 [&_svg]:w-4"
+            class="inline-flex h-9 w-9 items-center justify-center rounded text-muted transition-colors hover:bg-surface-2 hover:text-link [&_svg]:h-4 [&_svg]:w-4"
             aria-label="{{ item.label }}"
           >
             {% capture icon_file %}icons/{{ item.icon }}.svg{% endcapture %}

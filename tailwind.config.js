@@ -28,6 +28,7 @@ module.exports = {
         'primary-deep': 'var(--primary-deep)',
         'primary-dim': 'var(--primary-dim)',
         accent: 'var(--accent)',
+        link: 'var(--link)',
       },
       fontFamily: {
         display: ['Fraunces', 'Georgia', 'Times New Roman', 'serif'],

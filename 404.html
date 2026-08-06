@@ -1,0 +1,19 @@
+---
+layout: default
+title: Page not found
+description: That page doesn't exist.
+permalink: /404.html
+sitemap: false
+---
+
+<div class="mx-auto flex max-w-5xl flex-col items-start px-5 pt-24 pb-12">
+  <p class="font-mono text-sm text-accent">// 404</p>
+  <h1 class="mt-3">Page not found</h1>
+  <p class="mt-5 max-w-measure text-muted">
+    The page you're looking for doesn't exist — it may have moved, or the URL has a typo.
+  </p>
+  <div class="mt-8 flex gap-3">
+    <a href="{{ '/' | relative_url }}" class="btn-primary">Home</a>
+    <a href="{{ '/blog/' | relative_url }}" class="btn-outline">Blog</a>
+  </div>
+</div>
