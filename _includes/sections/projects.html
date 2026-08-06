@@ -20,6 +20,9 @@
           {% endfor %}
         </ul>
         {% endif %}
+        {% if project.footer %}
+        <div class="prose-body mt-4 max-w-measure text-sm">{{ project.footer | markdownify }}</div>
+        {% endif %}
       </div>
 
       <aside class="mt-6 border-t border-border pt-5 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">

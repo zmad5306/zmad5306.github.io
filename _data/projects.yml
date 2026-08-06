@@ -112,13 +112,25 @@
     live operational visibility, historical analytics, and dashboards that help
     teams debug failures, track reliability, and understand CI/CD behavior over
     time.
-
-
-    Built as a modular monolith, it combines a React frontend, a .NET backend,
-    GraphQL-powered analytics reads, realtime updates over SignalR, and a
-    Timescale-backed data platform for durable event and trend analysis.
-
-
+  bullets:
+    - >-
+      **Modular monolith by design:** webhook ingress, an API host serving
+      REST auth, GraphQL analytics reads, and SignalR realtime, and a
+      background task executor — one platform with clear seams instead of a
+      fleet of microservices.
+    - >-
+      **GraphQL as the source of truth:** the React frontend reads analytics
+      through GraphQL and treats realtime events as refresh and invalidation
+      signals, never as trusted payloads.
+    - >-
+      **Time-series data platform:** PostgreSQL with TimescaleDB holds durable
+      events, facts, and read models; Redis carries transient realtime
+      pub/sub.
+    - >-
+      **Built for operations:** database-backed job queueing drives repository
+      backfills, recurring repair, cleanup, and quota maintenance, and
+      releases ship as immutable tagged snapshots.
+  footer: >-
     ActionWatch is also a showcase for AI-augmented engineering in practice:
     **100% AI-coded**, with the architecture, intent, and final engineering
     judgment driven by me. I wrote about that workflow
