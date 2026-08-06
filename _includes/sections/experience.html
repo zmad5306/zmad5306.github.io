@@ -1,0 +1,50 @@
+<section id="experience" aria-labelledby="experience-title" class="reveal mx-auto max-w-5xl px-5 pt-16 sm:pt-20">
+  {% include section-header.html number="05" id="experience" title="Work Experience" %}
+
+  <p class="mb-10 max-w-measure text-sm text-muted">
+    A detailed version of my career history — including key projects, leadership, and modernization
+    efforts — is available in my
+    <a
+      href="https://github.com/zmad5306/zmad5306/blob/main/career-archive/README.md"
+      target="_blank"
+      rel="noopener noreferrer"
+      >full career archive</a
+    >.
+  </p>
+
+  <ol class="relative ml-1 space-y-12 border-l border-border pl-6 sm:ml-3 sm:pl-8">
+    {% for job in site.data.experience %}
+    <li class="relative">
+      <span
+        aria-hidden="true"
+        class="absolute -left-[31px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-accent bg-bg sm:-left-[39px]"
+      ></span>
+      <p class="font-mono text-sm text-accent">{{ job.start }} – {{ job.end }}</p>
+      <h3 class="mt-1">{{ job.role }}</h3>
+      <p class="mt-0.5 font-mono text-xs text-muted">{{ job.company }}</p>
+      <p class="mt-3 max-w-measure">{{ job.summary }}</p>
+
+      <details class="group mt-3">
+        <summary
+          class="inline-flex cursor-pointer list-none items-center gap-1.5 font-mono text-sm text-primary [&::-webkit-details-marker]:hidden"
+        >
+          <span class="transition-transform group-open:rotate-180 [&_svg]:h-3.5 [&_svg]:w-3.5" aria-hidden="true">{% include icons/chevron-down.svg %}</span>
+          <span class="group-open:hidden">Show highlights ({{ job.highlights | size }})</span>
+          <span class="hidden group-open:inline">Hide highlights</span>
+        </summary>
+        <ul class="mt-3 max-w-measure list-disc space-y-2 pl-5 text-sm marker:text-primary-deep">
+          {% for item in job.highlights %}
+          <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+          {% endfor %}
+        </ul>
+      </details>
+
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        {% for tech in job.tech %}
+        <span class="chip">{{ tech }}</span>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>

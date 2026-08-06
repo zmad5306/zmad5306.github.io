@@ -1,0 +1,31 @@
+<footer class="mt-24 border-t border-border">
+  <div class="mx-auto max-w-5xl px-5 py-10">
+    <div class="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+      <div>
+        <p class="font-display text-lg font-semibold">Zach Maddox</p>
+        <p class="mt-1 font-mono text-xs text-muted">
+          Senior Software Engineer &amp; Architect
+        </p>
+      </div>
+      <ul class="flex items-center gap-1">
+        {% for item in site.data.social %}
+        <li>
+          {% assign first_char = item.url | slice: 0, 1 %}
+          <a
+            href="{% if first_char == '/' %}{{ item.url | relative_url }}{% else %}{{ item.url }}{% endif %}"
+            {% unless first_char == '/' or item.icon == 'email' %}target="_blank" rel="noopener noreferrer"{% endunless %}
+            class="inline-flex h-9 w-9 items-center justify-center rounded text-muted transition-colors hover:bg-surface-2 hover:text-primary [&_svg]:h-4 [&_svg]:w-4"
+            aria-label="{{ item.label }}"
+          >
+            {% capture icon_file %}icons/{{ item.icon }}.svg{% endcapture %}
+            {% include {{ icon_file }} %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <p class="mt-8 text-center font-mono text-xs text-muted sm:text-left">
+      &copy; {{ site.time | date: '%Y' }} Zach Maddox. All rights reserved.
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,9 @@
+{% assign first_char = include.url | slice: 0, 1 %}
+{% if first_char == '/' %}
+<a href="{{ include.url | relative_url }}" class="link-pill">{{ include.label }}</a>
+{% else %}
+<a href="{{ include.url }}" target="_blank" rel="noopener noreferrer" class="link-pill">
+  {{ include.label }}
+  <span class="[&_svg]:h-3 [&_svg]:w-3" aria-hidden="true">{% include icons/external-link.svg %}</span>
+</a>
+{% endif %}

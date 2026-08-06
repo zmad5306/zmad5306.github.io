@@ -1,7 +1,7 @@
 # Contact / profile links used by nav and footer.
 - label: Email
   url: mailto:dev@zachmaddox.dev
-  icon: email
+  icon: mail
 - label: GitHub
   url: https://github.com/zmad5306
   icon: github

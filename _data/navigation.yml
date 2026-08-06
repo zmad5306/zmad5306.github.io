@@ -1,0 +1,18 @@
+# Header navigation. `anchor` enables scroll-spy on the home page.
+- label: About
+  url: /#about
+  anchor: about
+- label: Skills
+  url: /#skills
+  anchor: skills
+- label: Experience
+  url: /#experience
+  anchor: experience
+- label: Impact
+  url: /#contributions
+  anchor: contributions
+- label: Projects
+  url: /#projects
+  anchor: projects
+- label: Blog
+  url: /blog/

@@ -1,0 +1,20 @@
+<section id="certifications" aria-labelledby="certifications-title" class="reveal mx-auto max-w-5xl px-5 pt-16 sm:pt-20">
+  {% include section-header.html number="08" id="certifications" title="Certifications" %}
+  <div class="grid gap-x-8 gap-y-6 sm:grid-cols-3">
+    {% for cert in site.data.certifications %}
+    <div>
+      <h3 class="font-sans text-xs font-semibold uppercase tracking-wider text-muted">
+        {{ cert.issuer }}
+      </h3>
+      <ul class="mt-3 space-y-2">
+        {% for item in cert.items %}
+        <li class="text-sm">
+          {{ item.name }}
+          <span class="font-mono text-xs text-muted">({{ item.year }})</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
